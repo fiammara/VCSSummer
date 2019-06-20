@@ -27,3 +27,17 @@ const App = () => (
 );
 
 export default App;
+//search+jumbotron
+const Search=()=>{
+    return(<div>
+        <div>
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"/>
+        </div>
+
+        <div class="example">
+  <input type="text" placeholder="Search.." name="search"/>
+  <button type="submit">Search</button>
+        </div>
+
+    </div>);
+}
