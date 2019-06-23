@@ -11,6 +11,7 @@ class Course {
         this.date = date;
         this.price = `\u20ac` + price;
         this.rating = this.countCourseRating(4);
+        this.totalRatings = 75;
         this.logo = <i className="fab fa-reddit fa-5x"></i>;
     }
 
@@ -29,6 +30,7 @@ class Course {
     createDiv() {
         return (
             <div className="course-card">
+                <i className="far fa-bookmark fa-2x course-card-bookmark"></i>
                 <div className="course-card-top">
                     <div className="course-card-logo">
                         {/* <img src="" alt="courses logo" /> */}
@@ -37,17 +39,29 @@ class Course {
                     <div className="course-card-title">{this.title}</div>
                 </div>
                 <div className="course-card-bottom">
-                    <div>
-                        <span className="course-card-place">Vilnius</span>
-                        <span className="course-card-duration">50 d.</span>
-                        <span className="course-card-date">{this.date}</span>
+                    <div className="course-card-bottom-left">
+                        <span className="course-card-place">
+                            <i className="fas fa-map-marker-alt"></i>
+                            Vilnius
+                        </span>
+                        <span className="course-card-duration">
+                            <i className="fas fa-history"></i>
+                            50 d.
+                        </span>
+                        <span className="course-card-date">
+                            <i className="far fa-calendar-alt"></i>
+                            {this.date}
+                        </span>
                     </div>
-                    <div>
-                        <span className="course-card-rating">{this.rating}</span>
-                        <span className="course-card-price">{this.price} </span>
-                        {this.random};
+                    <div className="course-card-bottom-right">
+                        <div className="course-card-rating">
+                            {this.rating}
+                            <span className="course-card-rating-total">{this.totalRatings}</span>
+                        </div>
+                        <h2 className="course-card-price">{this.price} </h2>
                     </div>
                 </div>
+                <i class="fas fa-arrow-down fa-2x course-card-arrow-more"></i>
             </div>
         );
     }

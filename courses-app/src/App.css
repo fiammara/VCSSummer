@@ -33,14 +33,29 @@
 }
 
 .course-card {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
   max-width: 20em;
-  height: 10em;
+  height: 12em;
   margin: 2em;  
   padding: 2em;
-  border: 1px solid #61dafb;
+  border: 1px solid grey;
+}
+
+.course-card i {
+  margin-right: 0.5em
+}
+
+.course-card-bookmark {
+  position: absolute;
+  right: 0.3em;
+  top: 0.3em;
+}
+
+.course-card-bookmark:hover {
+  color: tomato;
 }
 
 .course-card-top, .course-card-bottom {
@@ -50,10 +65,46 @@
   align-content: space-between;
 }
 
-.course-card-top img {
+.course-card-top-logo {
   flex: 1;
+  padding: 1em;
 }
 
-.course-card-top div {
+.course-card-top-title {
   flex: 3;
+}
+
+.course-card-bottom {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.course-card-bottom-left, .course-card-bottom-right {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course-card-bottom-left *, .course-card-bottom-right * {
+  flex-basis: 100%;
+}
+
+.course-card-rating {
+  position: relative;
+}
+
+.course-card-rating-total {
+  position: absolute;
+  top: -50%;
+}
+
+.course-card-arrow-more {
+  position: absolute;
+  bottom: 0.2em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.course-card-arrow-more:hover {
+  color: tomato;
+  transform: scale(1.1) translateX(-45%);
 }
