@@ -20,7 +20,7 @@ class Lector {
         );
     }
 
-    renderLector() {
+    render() {
         return (
             <div className="card-info">
                 {this.renderNavigation()}
@@ -40,6 +40,6 @@ class Lector {
 }
 
 const lector = new Lector("John", "Doe");
-const InfoLector = () => lector.renderLector();
+const InfoLector = () => lector.render();
 
 export default InfoLector; 

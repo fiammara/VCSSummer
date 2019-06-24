@@ -18,7 +18,7 @@ class Program {
         );
     }
 
-    renderProgram() {
+    render() {
         return (
             <div className="card-info">
                 {this.renderNavigation()}
@@ -34,7 +34,7 @@ class Program {
 }
 
 const program = new Program();
-const InfoProgram = () => program.renderProgram();
+const InfoProgram = () => program.render();
 
 
 export default InfoProgram; 
