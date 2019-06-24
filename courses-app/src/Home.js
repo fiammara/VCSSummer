@@ -1,6 +1,6 @@
 import React from "react";
 import Calendar from 'react-calendar';
-import Courses from './CourseCard';
+import Courses from './Models/CourseCard';
 
 const Home = () => {
     return (

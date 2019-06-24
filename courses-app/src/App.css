@@ -56,6 +56,7 @@
 
 .course-card-bookmark:hover {
   color: tomato;
+  cursor: pointer;
 }
 
 .course-card-top, .course-card-bottom {
@@ -107,4 +108,64 @@
 .course-card-arrow-more:hover {
   color: tomato;
   transform: scale(1.1) translateX(-45%);
+  cursor: pointer;
+}
+
+.card-info {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50em;
+  border: 1px solid grey;
+  background-color: lightgrey;
+}
+
+.card-info .content {
+  margin: 2em;
+  padding: 0em 1em;
+  background-color: white;
+}
+
+.card-info-tabs{
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.card-info-tabs-tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.3em;
+}
+
+.tab-active {
+  background-color: lightgrey;
+  color: white;
+}
+
+.card-info-calendar {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-info-calendar h2 {
+  flex-basis: 100%;
+  padding: 0.2em;
+  background-color: lightgrey;
+}
+.card-info-calendar p {
+  padding: 0.2em;
+  background-color: lightgrey;
+  margin: 0em 0em 1em 0em;  
+}
+
+.card-info-calendar div:first-of-type {
+  flex: 1;
+  text-align: center;
+}
+
+.card-info-calendar div:last-of-type {
+  flex: 5;
 }
