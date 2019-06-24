@@ -3,7 +3,7 @@ import InfoProgram from "./Models/Program";
 import InfoLector from "./Models/Lector";
 import InfoCalendar from "./Models/CourseCalendar";
 import InfoCert from "./Models/Cert";
-// import InfoReviews from "./Models/Review";
+import InfoReviews from "./Models/Review";
 import InfoContacts from "./Models/Contacts";
 
 const InfoAboutCourse = () => {
@@ -13,7 +13,7 @@ const InfoAboutCourse = () => {
             <InfoLector />
             <InfoCalendar />
             <InfoCert />
-            {/* <InfoReviews /> */}
+            <InfoReviews />
             <InfoContacts />
         </div>
     );

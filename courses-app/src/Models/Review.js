@@ -1,87 +1,90 @@
 import React from "react";
-import CourseCards from "./Models/CourseCard";
+import CourseCard from "./CourseCard";
+import { Z_RLE } from "zlib";
 
-class InfoAboutCourse {
-    constructor(course) {
-        this.course = 'course';
-    }
-
-    renderNavigation() {
-        return (
-            <div className="card-info-tabs">
-                <div className="card-info-tabs-tab tab-active">PROGRAMA</div>
-                <div className="card-info-tabs-tab">LEKTORIUS</div>
-                <div className="card-info-tabs-tab">KALENDORIUS</div>
-                <div className="card-info-tabs-tab">SERTIFIKATAS</div>
-                <div className="card-info-tabs-tab">ATSILIEPIMAI</div>
-                <div className="card-info-tabs-tab">KONTAKTAI</div>
-            </div>
-        );
-    }
-
-    renderInfo() {
-        return (
-            <div className="card-info">
-                {this.renderNavigation()}
-                <div className="card-info-program">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <button>Skaityti daugiau</button>
-                </div>
-            </div>
-        );
-    }
-
-    renderLector() {
-        return (<div className="card-info-lector">
-            <div className="card-info-lector-img">
-                {/* <img src="" alt="lector image" /> */}
-                <i className="fas fa-user-graduate fa-8x"></i>
-            </div>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>);
-    }
-
-    renderCalendar() {
-        return (<div className="course-info-calendar">
-
-        </div>);
-    }
-
-    renderCertificate() {
-        return (<div className="course-info-certificate">
-
-        </div>);
-    }
-
-    renderReviewsTotal() {
-        return (<div className="course-info-reviews">
-
-        </div>);
-    }
-
-    renderReviews() {
-        return (<div className="course-info-reviews">
-
-        </div>);
-    }
-
-    renderContact() {
-        return (<div className="course-info-contacts">
-
-        </div>);
+class Review {
+    constructor(course, review, user, date, rating) {
+        this.course = course;
+        this.review = review;
+        this.user = user;
+        this.date = date;
+        this.rating = rating
     }
 }
 
-const information = new InfoAboutCourse(CourseCards.allCourses[0]);
-const info = () => {
+const allReviews = [
+    new Review(CourseCard.allCourses[0], 'Very nice!', 'Someone', '2019.06.10', 5),
+    new Review(CourseCard.allCourses[1], 'Meh', 'Haxor', '2019.06.12', 2)
+];
+
+const calculateAverage = () => {
+    let sum = 0;
+    allReviews.forEach(element => {
+        sum += element.rating;
+    });
+    return sum / allReviews.length;
+}
+
+const countStars = (rating) => {
+    let finalRating = [];
+    for (let i = 0; i < 5; i++) {
+        if (i < rating) {
+            finalRating.push(<i className="fas fa-star"></i>);
+        } else {
+            finalRating.push(<i className="far fa-star"></i>);
+        }
+    }
+    return finalRating;
+}
+
+const renderNavigation = () => {
     return (
-        information.renderInfo(),
-        information.renderLector()
+        <div className="card-info-tabs">
+            <div className="card-info-tabs-tab">PROGRAMA</div>
+            <div className="card-info-tabs-tab">LEKTORIUS</div>
+            <div className="card-info-tabs-tab">KALENDORIUS</div>
+            <div className="card-info-tabs-tab">SERTIFIKATAS</div>
+            <div className="card-info-tabs-tab tab-active">ATSILIEPIMAI</div>
+            <div className="card-info-tabs-tab">KONTAKTAI</div>
+        </div>
     );
 }
 
-export default info; 
+const render = (allReviews) => {
+    return (
+        <div className="card-info">
+            {renderNavigation()}
+            <div className="card-info-reviews content">
+                <div className="card-info-reviews-top">
+                    <p><span>{calculateAverage()}</span> Bendras reitingas</p>
+                </div>
+                <div className="card-info-reviews-bottom">
+                    {allReviews.map(el => {
+                        return (
+                            <div className="card-info-reviews-card">
+                                <p>{countStars(el.rating)}</p>
+                                <p>{el.review}</p>
+                                <div>
+                                    <div className="card-info-reviews-user">
+                                        <p>{el.user}</p>
+                                        <p>{el.date}</p>
+                                    </div>
+                                    <div className="card-info-reviews-buttons">
+                                        <i className="far fa-thumbs-up fa-2x"></i>
+                                        <i className="far fa-thumbs-down fa-2x"></i>
+                                        <button>Pranešti</button>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+const InfoReviews = () => render(allReviews);
+
+
+export default InfoReviews; 

@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 const randomDesc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
 class Course {
@@ -61,7 +59,9 @@ class Course {
                         <h2 className="course-card-price">{this.price} </h2>
                     </div>
                 </div>
-                <i class="fas fa-arrow-down fa-2x course-card-arrow-more"></i>
+                <div className="course-card-arrow-more">
+                    <i class="fas fa-arrow-down fa-2x"></i>
+                </div>
             </div>
         );
     }
@@ -69,12 +69,13 @@ class Course {
 
 const allCourses = [
     new Course(),
+    new Course("How to open doors", undefined, "2019.12.25", 599),
     new Course("Last one")
-]
+];
 
 const CourseCards = () => {
     return allCourses.map(el => el.createDiv());
-}
+};
 
 
 export default { CourseCards, allCourses };
