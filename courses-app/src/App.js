@@ -45,6 +45,7 @@ const Search=()=>{
 
     </div>);
 }
+
 //calendar
 const Calendar=()=>{
   return(<table border='1'  bordercolor='#FFFF00' cellspacing='0' cellpadding='0' align=center>
@@ -250,3 +251,4 @@ function openCity(evt, cityName) {
 
 );
 }
+
