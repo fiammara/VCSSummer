@@ -63,7 +63,6 @@ iframe{
 
 }
 
-
 /*search end*/
 /* categoryList1 start*/
 .cart1{
@@ -201,7 +200,6 @@ iframe{
   border-top: none;
 }
 
-
 .container {
   padding: 16px;
   background-color: white;
@@ -254,9 +252,6 @@ a {
   background-color: #f1f1f1;
   text-align: center;
 }
-
-
-
 
 /* style the container */
 .container {
@@ -377,8 +372,8 @@ input[type=submit]:hover {
     display: block;
     text-align: center;
   }
+}
 /* SingInLogIn end*/
-=======
 
 .course-card {
   position: relative;
@@ -605,4 +600,3 @@ input[type=submit]:hover {
 .card-info-contacts-img {
   text-align: center;
 }
-

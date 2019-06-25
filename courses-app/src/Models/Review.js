@@ -1,6 +1,6 @@
 import React from "react";
 import CourseCard from "./CourseCard";
-import { Z_RLE } from "zlib";
+//import { Z_RLE } from "zlib";
 
 class Review {
     constructor(course, review, user, date, rating) {
@@ -85,6 +85,5 @@ const render = (allReviews) => {
 }
 
 const InfoReviews = () => render(allReviews);
-
 
 export default InfoReviews; 
