@@ -1,3 +1,10 @@
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -30,14 +37,6 @@
   to {
     transform: rotate(360deg);
   }
-}
-/*search start*/
-body {
-  font-family: Arial;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .example input[type=text] {
@@ -379,3 +378,231 @@ input[type=submit]:hover {
     text-align: center;
   }
 /* SingInLogIn end*/
+=======
+
+.course-card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  max-width: 25em;
+  min-width: 20em;
+  height: auto;
+  margin: 2em;  
+  padding: 2em 1em 0.5em 1em;
+  border: 1px solid grey;
+}
+
+.card-info-tabs-tab:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.tab-active:hover {
+  color: white;
+  cursor: default;
+}
+
+.course-card i {
+  margin: 0.2em
+}
+
+.course-card-bookmark {
+  position: absolute;
+  right: 0.3em;
+  top: 0.3em;
+}
+
+.course-card-bookmark:hover {
+  color: tomato;
+  cursor: pointer;
+}
+
+.course-card-top, .course-card-bottom {
+  display: flex;
+  flex-basis: 100%;
+  height: 50%;
+  align-content: space-between;
+}
+
+.course-card-top-logo {
+  flex: 1;
+  padding: 1em;
+}
+
+.course-card-top-title {
+  flex: 3;
+}
+
+.course-card-bottom {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.course-card-bottom-left, .course-card-bottom-right {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course-card-bottom-left *, .course-card-bottom-right * {
+  flex-basis: 100%;
+}
+
+.course-card-rating {
+  position: relative;
+}
+
+.course-card-rating-total {
+  position: absolute;
+  top: -50%;
+}
+
+.course-card-arrow-more {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.course-card-arrow-more:hover {
+  color: tomato;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-info {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50em;
+  border: 1px solid grey;
+  background-color: lightgrey;
+}
+
+.card-info .content {
+  flex-basis: 100%;
+  margin: 2em;
+  padding: 1em 1em;
+  background-color: white;
+}
+
+.card-info-tabs{
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.card-info-tabs-tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.3em;
+}
+
+.tab-active {
+  background-color: lightgrey;
+  color: white;
+}
+
+.card-info-calendar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-info-calendar h2 {
+  flex-basis: 100%;
+  padding: 0.2em;
+  background-color: lightgrey;
+}
+.card-info-calendar p {
+  padding: 0.2em;
+  background-color: lightgrey;
+  margin: 0em 0em 1em 0em;  
+}
+
+.card-info-calendar div:first-of-type {
+  flex: 1;
+  text-align: center;
+}
+
+.card-info-calendar div:last-of-type {
+  flex: 5;
+}
+
+.card-info-cert-img {
+  text-align: center;
+}
+
+.card-info-reviews {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-info-reviews-top {
+  flex-basis: 100%;
+}
+
+.card-info-reviews span {
+  font-size: 250%;
+}
+
+.card-info-reviews-bottom {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+}
+
+.card-info-reviews-card {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  margin: 0.5em 0em;
+} 
+
+.card-info-reviews-card p {
+  flex-basis: 100%;
+  margin: 0.3em;
+}
+
+.card-info-reviews-card>div {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-basis: 100%;
+  justify-content: space-between;
+}
+
+.card-info-reviews-user {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-info-reviews-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+
+.card-info-reviews-buttons i {
+  margin: 0em 0.3em;
+}
+
+.card-info-reviews-buttons i:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+.card-info-reviews-buttons button {
+  margin: 0em 0.3em;
+  border: 1px solid grey;
+  border-radius: 0.3em;
+  background-color: white;
+  padding: 0.5em;
+}
+
+.card-info-reviews-buttons button:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.card-info-contacts-img {
+  text-align: center;
+}
+
