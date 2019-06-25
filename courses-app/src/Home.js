@@ -1,30 +1,34 @@
 import React from "react";
-import Calendar from 'react-calendar'
+import Calendar from 'react-calendar';
+import Courses from './Models/CourseCard';
 
 const Home = () => {
     return (
-        <table>
-        <tr>
-            <td>Home page
+        <div id="mainContainer">
+            <table>
+                <tr>
+                    <td>Home page
             </td>
-            <td>
-                <button onClick={() => "# "}>
-                <Calendar />
-                   Great calendar
+                    <td>
+                        <button onClick={() => "# "}>
+                            <Calendar />
+                            Great calendar
                 </button>
-            </td>
-        </tr>
+                    </td>
+                </tr>
 
-        <tr>
-            <td>Text
+                <tr>
+                    <td>Text
             </td>
-            <td>
-                <button onClick={() => "# "}>
-              Button
+                    <td>
+                        <button onClick={() => "# "}>
+                            Button
                 </button>
-            </td>
-        </tr>
-        </table>
+                    </td>
+                </tr>
+            </table>
+            <Courses.CourseCards />
+        </div>
     );
 };
 
