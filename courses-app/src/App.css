@@ -609,6 +609,11 @@ input[type="submit"]:hover {
   display: flex;
   flex-wrap: wrap;
 }
+
 .card-info-contacts-img {
   text-align: center;
+}
+
+.card-info-contacts * {
+  flex-basis: 100%;
 }
