@@ -39,7 +39,7 @@ body {
   }
 }
 
-.example input[type=text] {
+.example input[type="text"] {
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
@@ -52,116 +52,113 @@ body {
   float: left;
   width: 20%;
   padding: 20px;
-  background: #2196F3;
+  background: #2196f3;
   color: white;
   font-size: 17px;
   border: 1px solid grey;
   border-left: none;
   cursor: pointer;
 }
-iframe{
-
+iframe {
 }
 
 /*search end*/
 /* categoryList1 start*/
-.cart1{
-		background-color:red;
-		height:270px;
-		width:750px;
-
-	}
-	.imageC{
-		background-color: yellow;
-		height: 110;
-		width: 110;
-		float: left;
-		margin: 15;
-	}
-	.titleC{
-		background-color: blue;
-		height: 50;
-		width: 550;
-		float: right;
-		margin: 15;
-	}
-	.ratingC{
-		background-color: blue;
-		height: 30;
-		width: 250;
-		float: right;
-		margin: 15 45;
-	}
-	.kainaC{
-		background-color: blue;
-		height: 30;
-		width: 250;
-		float: right;
-		margin: 15 45;
-	}
-	.infoC{
-		background-color: green;
-		height: 100;
-		width: 250;
-		float: left;
-		margin: 15 15 15 15;
-	}
+.cart1 {
+  background-color: red;
+  height: 270px;
+  width: 750px;
+}
+.imageC {
+  background-color: yellow;
+  height: 110;
+  width: 110;
+  float: left;
+  margin: 15;
+}
+.titleC {
+  background-color: blue;
+  height: 50;
+  width: 550;
+  float: right;
+  margin: 15;
+}
+.ratingC {
+  background-color: blue;
+  height: 30;
+  width: 250;
+  float: right;
+  margin: 15 45;
+}
+.kainaC {
+  background-color: blue;
+  height: 30;
+  width: 250;
+  float: right;
+  margin: 15 45;
+}
+.infoC {
+  background-color: green;
+  height: 100;
+  width: 250;
+  float: left;
+  margin: 15 15 15 15;
+}
 /* categoryList1 end*/
 /* categoryList2 start*/
-.cart1{
-		background-color:red;
-		height:270px;
-		width:750px;
-
-	}
-	.imageC{
-		background-color: yellow;
-		height: 110;
-		width: 110;
-		float: left;
-		margin: 15;
-	}
-	.titleC{
-		background-color: blue;
-		height: 50;
-		width: 550;
-		float: right;
-		margin: 15;
-	}
-	.ratingC{
-		background-color: blue;
-		height: 30;
-		width: 250;
-		float: right;
-		margin: 15 45;
-	}
-	.kainaC{
-		background-color: blue;
-		height: 30;
-		width: 250;
-		float: right;
-		margin: 15 45;
-	}
-	.infoC{
-		background-color: green;
-		height: 100;
-		width: 250;
-		float: left;
-		margin: 15 15 15 15;
-	}
-	.cart2{
-		margin-top: 10px;
-		background-color:red;
-		height:320px;
-		width:750px;
-	}
-	.infoDaugiauC{
-		background-color: grey;
-		width: 700px;
-		float: left;
-		padding: 10 10 10 10;
-		margin: 18 10 10 15;
-	}
+.cart1 {
+  background-color: red;
+  height: 270px;
+  width: 750px;
+}
+.imageC {
+  background-color: yellow;
+  height: 110;
+  width: 110;
+  float: left;
+  margin: 15;
+}
+.titleC {
+  background-color: blue;
+  height: 50;
+  width: 550;
+  float: right;
+  margin: 15;
+}
+.ratingC {
+  background-color: blue;
+  height: 30;
+  width: 250;
+  float: right;
+  margin: 15 45;
+}
+.kainaC {
+  background-color: blue;
+  height: 30;
+  width: 250;
+  float: right;
+  margin: 15 45;
+}
+.infoC {
+  background-color: green;
+  height: 100;
+  width: 250;
+  float: left;
+  margin: 15 15 15 15;
+}
+.cart2 {
+  margin-top: 10px;
+  background-color: red;
+  height: 320px;
+  width: 750px;
+}
+.infoDaugiauC {
+  background-color: grey;
+  width: 700px;
+  float: left;
+  padding: 10 10 10 10;
+  margin: 18 10 10 15;
+}
 /* categoryList2 end*/
 /* SingInLogIn start*/
 .tab {
@@ -206,7 +203,8 @@ iframe{
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -215,7 +213,8 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -228,7 +227,7 @@ hr {
 
 /* Set a style for the submit button */
 .registerbtn {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
@@ -283,12 +282,12 @@ input:hover,
 
 /* add appropriate colors to fb, twitter and google buttons */
 .fb {
-  background-color: #3B5998;
+  background-color: #3b5998;
   color: white;
 }
 
 .twitter {
-  background-color: #55ACEE;
+  background-color: #55acee;
   color: white;
 }
 
@@ -298,13 +297,13 @@ input:hover,
 }
 
 /* style the submit button */
-input[type=submit] {
-  background-color: #4CAF50;
+input[type="submit"] {
+  background-color: #4caf50;
   color: white;
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #45a049;
 }
 
@@ -383,7 +382,7 @@ input[type=submit]:hover {
   max-width: 25em;
   min-width: 20em;
   height: auto;
-  margin: 2em;  
+  margin: 2em;
   padding: 2em 1em 0.5em 1em;
   border: 1px solid grey;
 }
@@ -399,7 +398,7 @@ input[type=submit]:hover {
 }
 
 .course-card i {
-  margin: 0.2em
+  margin: 0.2em;
 }
 
 .course-card-bookmark {
@@ -413,7 +412,8 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 
-.course-card-top, .course-card-bottom {
+.course-card-top,
+.course-card-bottom {
   display: flex;
   flex-basis: 100%;
   height: 50%;
@@ -434,12 +434,14 @@ input[type=submit]:hover {
   flex-wrap: nowrap;
 }
 
-.course-card-bottom-left, .course-card-bottom-right {
+.course-card-bottom-left,
+.course-card-bottom-right {
   display: flex;
   flex-wrap: wrap;
 }
 
-.course-card-bottom-left *, .course-card-bottom-right * {
+.course-card-bottom-left *,
+.course-card-bottom-right * {
   flex-basis: 100%;
 }
 
@@ -478,7 +480,7 @@ input[type=submit]:hover {
   background-color: white;
 }
 
-.card-info-tabs{
+.card-info-tabs {
   display: flex;
   flex-basis: 100%;
   flex-wrap: nowrap;
@@ -502,23 +504,29 @@ input[type=submit]:hover {
   flex-wrap: wrap;
 }
 
-.card-info-calendar h2 {
+.card-info-calendar-tab {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-info-calendar-tab h2 {
   flex-basis: 100%;
   padding: 0.2em;
   background-color: lightgrey;
 }
-.card-info-calendar p {
+.card-info-calendar-tab p {
   padding: 0.2em;
   background-color: lightgrey;
-  margin: 0em 0em 1em 0em;  
+  margin: 0em 0em 1em 0em;
 }
 
-.card-info-calendar div:first-of-type {
+.card-info-calendar-tab div:first-of-type {
   flex: 1;
   text-align: center;
 }
 
-.card-info-calendar div:last-of-type {
+.card-info-calendar-tab div:last-of-type {
   flex: 5;
 }
 
@@ -550,14 +558,14 @@ input[type=submit]:hover {
   flex-basis: 100%;
   flex-wrap: wrap;
   margin: 0.5em 0em;
-} 
+}
 
 .card-info-reviews-card p {
   flex-basis: 100%;
   margin: 0.3em;
 }
 
-.card-info-reviews-card>div {
+.card-info-reviews-card > div {
   display: flex;
   flex-wrap: nowrap;
   flex-basis: 100%;
@@ -597,6 +605,10 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 
+.card-info-contacts {
+  display: flex;
+  flex-wrap: wrap;
+}
 .card-info-contacts-img {
   text-align: center;
 }
