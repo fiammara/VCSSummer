@@ -2,12 +2,13 @@ import React from "react";
 
 const randomDesc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
-class Course {
-    constructor(title = "Some awesome course", description = randomDesc, date = "2016.06.10", price = 700) {
-        this.title = title;
-        this.description = description;
-        this.date = date;
-        this.price = `\u20ac` + price;
+class Course extends React.Component {
+    constructor(props) {
+        super(props);
+        this.title = "Some awesome course";
+        this.description = randomDesc;
+        this.date = "2016.06.10";
+        this.price = `\u20ac` + 700;
         this.rating = this.countCourseRating(4);
         this.totalRatings = 75;
         this.logo = <i className="fab fa-reddit fa-5x"></i>;

@@ -1,36 +1,15 @@
 import React from "react";
 import CourseCard from "./CourseCard";
 
-class CourseCalendar {
-    constructor(courses) {
-        this.courses = courses;
-    }
-
-    renderNavigation() {
-        return (
-            <div className="card-info-tabs">
-                <div className="card-info-tabs-tab">PROGRAMA</div>
-                <div className="card-info-tabs-tab">LEKTORIUS</div>
-                <div className="card-info-tabs-tab tab-active">KALENDORIUS</div>
-                <div className="card-info-tabs-tab">SERTIFIKATAS</div>
-                <div className="card-info-tabs-tab">ATSILIEPIMAI</div>
-                <div className="card-info-tabs-tab">KONTAKTAI</div>
-            </div>
-        );
-    }
-
-    render() {
-        return (
-            <div className="card-info">
-                {this.renderNavigation()}
-                {this.courses.map(() => this.renderCalendar())}
-            </div>
-        );
+class CourseCalendar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.courses = props.courses;
     }
 
     renderCalendar() {
         return (
-            <div className="card-info-calendar content">
+            <div className="card-info-calendar-tab">
                 <h2>ARTIMIAUSI KURSAI</h2>
                 <div>
                     <i className="far fa-calendar-alt fa-4x"></i>
@@ -43,9 +22,14 @@ class CourseCalendar {
             </div>
         );
     }
+
+    render() {
+        return (
+            <div className="card-info-calendar content">
+                {this.courses.map(() => this.renderCalendar())}
+            </div>
+        );
+    }
 }
 
-const calendar = new CourseCalendar(CourseCard.allCourses);
-const InfoCalendar = () => calendar.render();
-
-export default InfoCalendar; 
+export default CourseCalendar; 
