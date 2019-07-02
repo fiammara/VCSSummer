@@ -6,6 +6,7 @@ import Courses from "./Courses";
 import Home from "./Home";
 import CourseCards from "./Models/CourseCard";
 import InfoAboutCourse from "./InfoAboutCourse";
+import Filter from "./Filter";
 
 const App = () => (
   <BrowserRouter>
@@ -30,6 +31,9 @@ const App = () => (
         <button className="NavButton">
           <NavLink to={{ pathname: "/infoAboutCourse" }}>Info about course</NavLink>
         </button>
+        <button className="NavButton">               
+                <NavLink to={{ pathname: "/filter" }}>Filter component</NavLink>
+            </button>
 
       </div>
       <Switch>
@@ -37,7 +41,7 @@ const App = () => (
         <Route exact path="/home" component={Home} />
         <Route exact path="/courseCards" component={CourseCards.CourseCards} />
         <Route exact path="/infoAboutCourse" component={InfoAboutCourse} />
-
+        <Route exact path="/filter" component={Filter} /> 
       </Switch>
     </div>
   </BrowserRouter>

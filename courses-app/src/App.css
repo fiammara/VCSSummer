@@ -295,7 +295,6 @@ input:hover,
   background-color: #dd4b39;
   color: white;
 }
-
 /* style the submit button */
 input[type="submit"] {
   background-color: #4caf50;
@@ -306,7 +305,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #45a049;
 }
-
 /* Two-column layout */
 .col {
   float: left;
@@ -616,4 +614,34 @@ input[type="submit"]:hover {
 
 .card-info-contacts * {
   flex-basis: 100%;
+}
+
+.detaliPaieska {
+   
+  background-color: lightgray;
+  text-align: center
+}
+.searchB {
+ 
+ background-color: gray !important;
+ width:100%;
+ color:white
+}
+.datos {
+ color:gray;
+ font-size:15px;
+  border-radius: 5px;border-radius: 5px;
+  border: 1px solid rgb(121, 119, 122) !important;
+  padding-bottom: 15px; 
+  padding-top: 15px; 
+  padding-left: 10px;
+  
+}
+.filterDiv {
+  width:70%;
+  padding-left:15px;
+  margin-top:80px;
+}
+.filterDiv input[type="checkbox"] {   
+  width: 3%; 
 }
