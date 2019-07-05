@@ -9,10 +9,11 @@ import Certificate from './Cert';
 
 class CourseInfoCard extends React.Component {
 
-    state = { tab: "program" };
+    state = { tab: "PROGRAMA" };
 
     activateTab = event => {
         const tab = event.currentTarget.textContent;
+        document.querySelector('.tab-active').classList.remove('tab-active');
         event.currentTarget.classList.add('tab-active');
         this.setState({ tab })
     }
@@ -20,7 +21,7 @@ class CourseInfoCard extends React.Component {
     renderNavigation() {
         return (
             <div className="card-info-tabs">
-                <div className="card-info-tabs-tab" onClick={this.activateTab}>PROGRAMA</div>
+                <div className="card-info-tabs-tab tab-active" onClick={this.activateTab}>PROGRAMA</div>
                 <div className="card-info-tabs-tab" onClick={this.activateTab}>LEKTORIUS</div>
                 <div className="card-info-tabs-tab" onClick={this.activateTab}>KALENDORIUS</div>
                 <div className="card-info-tabs-tab" onClick={this.activateTab}>SERTIFIKATAS</div>
