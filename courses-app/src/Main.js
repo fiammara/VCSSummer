@@ -6,15 +6,16 @@ class Main extends React.Component {
 
         return (
             <div className="main">
-
-                <p>Main</p>
-                <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" />
-                 <button onClick={this.props.search} > DETALI PAIEŠKA</button> 
-                <div>
-                
-                </div>
-
-            </div>
+                <div class="divas">
+	                <div class="textBlock">
+		                <div class="tekstas">
+			                <h2>Lorem ipsum dolor sit<br> amet, consetetur <br>sadipscing elitr, sed diam nonumy eirmod tempor?</h2>
+		                </div>
+                        <input class="searchas" type="text" placeholder="Search.." name="search">
+                        <button class="btn1" placeholder="Detali paieska">Detali Paieska</button>
+	</div>
+</div>
+            <div>
         );
     }
 
