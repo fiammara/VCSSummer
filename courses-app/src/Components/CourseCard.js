@@ -1,20 +1,8 @@
-import React from "react";
+import React from 'react';
+import '../App_sena_versija.css';
 
-const randomDesc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-
-class Course extends React.Component {
-    constructor(props) {
-        super(props);
-        this.title = "Some awesome course";
-        this.description = randomDesc;
-        this.date = "2016.06.10";
-        this.price = `\u20ac` + 700;
-        this.rating = this.countCourseRating(4);
-        this.totalRatings = 75;
-        this.logo = <i className="fab fa-reddit fa-5x"></i>;
-    }
-
-    countCourseRating(rating) {
+class CourseCard extends React.Component {
+    renderRating(rating) {
         let finalRating = [];
         for (let i = 0; i < 5; i++) {
             if (i < rating) {
@@ -26,58 +14,46 @@ class Course extends React.Component {
         return finalRating;
     }
 
-    createDiv() {
+    render() {
         return (
             <div className="course-card">
                 <i className="far fa-bookmark fa-2x course-card-bookmark"></i>
                 <div className="course-card-top">
                     <div className="course-card-logo">
-                        {/* <img src="" alt="courses logo" /> */}
-                        {this.logo}
+                        <img className="logo-image" src={this.props.course.logo} alt="courses logo" />
                     </div>
-                    <div className="course-card-title">{this.title}</div>
+                    <div className="course-card-title">{this.props.course.title}</div>
                 </div>
                 <div className="course-card-bottom">
                     <div className="course-card-bottom-left">
                         <span className="course-card-place">
                             <i className="fas fa-map-marker-alt"></i>
-                            Vilnius
+                            {this.props.course.location}
                         </span>
                         <span className="course-card-duration">
                             <i className="fas fa-history"></i>
-                            50 d.
-                        </span>
+                            {this.props.course.duration} d.
+                            </span>
                         <span className="course-card-date">
                             <i className="far fa-calendar-alt"></i>
-                            {this.date}
+                            {this.props.course.date}
                         </span>
                     </div>
                     <div className="course-card-bottom-right">
                         <div className="course-card-rating">
-                            {this.rating}
-                            <span className="course-card-rating-total">{this.totalRatings}</span>
+                            {this.renderRating(this.props.course.countRating())}
+                            <span className="course-card-rating-total">{this.props.course.reviews.length}</span>
                         </div>
-                        <h2 className="course-card-price">{this.price} </h2>
+                        <h2 className="course-card-price">&euro; {this.props.course.price} </h2>
                     </div>
                 </div>
                 <div className="course-card-arrow-more">
-                    <i class="fas fa-arrow-down fa-2x"></i>
+                    <i className="fas fa-arrow-down fa-2x"></i>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-const allCourses = [
-    new Course(),
-    new Course("How to open doors", undefined, "2019.12.25", 599),
-    new Course("Last one")
-];
-
-const CourseCards = () => {
-    return allCourses.map(el => el.createDiv());
-};
-
-
-export default { CourseCards, allCourses };
+export default CourseCard;
 

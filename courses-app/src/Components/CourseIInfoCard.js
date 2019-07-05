@@ -4,7 +4,7 @@ import InfoLector from './Lector';
 import CourseCalendar from './CourseCalendar';
 import InfoReviews from './Review';
 import InfoContacts from './Contacts';
-import CourseCard from "./CourseCard";
+import CourseCard from './CourseCard';
 import Certificate from './Cert';
 
 class CourseInfoCard extends React.Component {

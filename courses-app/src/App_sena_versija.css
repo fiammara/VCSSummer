@@ -360,7 +360,7 @@ input[type="submit"]:hover {
     width: 100%;
     margin-top: 0;
   }
-  
+
   /* hide the vertical line */
   .vl {
     display: none;
@@ -419,12 +419,16 @@ input[type="submit"]:hover {
   align-content: space-between;
 }
 
-.course-card-top-logo {
+.course-card-logo {
   flex: 1;
-  padding: 1em;
+  margin: 0 0.5em;
 }
 
-.course-card-top-title {
+.logo-image {
+  width: 5em;
+}
+
+.course-card-title {
   flex: 3;
 }
 
@@ -618,31 +622,29 @@ input[type="submit"]:hover {
 }
 
 .detaliPaieska {
-   
   background-color: lightgray;
-  text-align: center
+  text-align: center;
 }
 .searchB {
- 
- background-color: gray !important;
- width:100%;
- color:white
+  background-color: gray !important;
+  width: 100%;
+  color: white;
 }
 .datos {
- color:gray;
- font-size:15px;
-  border-radius: 5px;border-radius: 5px;
+  color: gray;
+  font-size: 15px;
+  border-radius: 5px;
+  border-radius: 5px;
   border: 1px solid rgb(121, 119, 122) !important;
-  padding-bottom: 15px; 
-  padding-top: 15px; 
+  padding-bottom: 15px;
+  padding-top: 15px;
   padding-left: 10px;
-  
 }
 .filterDiv {
-  width:70%;
-  padding-left:15px;
-  margin-top:80px;
+  width: 70%;
+  padding-left: 15px;
+  margin-top: 80px;
 }
-.filterDiv input[type="checkbox"] {   
-  width: 3%; 
+.filterDiv input[type="checkbox"] {
+  width: 3%;
 }
