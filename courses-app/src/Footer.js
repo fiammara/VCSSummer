@@ -11,8 +11,8 @@ class Footer extends React.Component {
     render() {
         return (
 
-            <div className="footer">
-                <Container fixed="top">
+            <div className="footer" >
+                <Container >
                     <Navbar >
                         <Row>
                             <Col><Button className="button_footer " variant="outline-primary" >DUK</Button></Col>

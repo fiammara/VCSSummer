@@ -1,13 +1,13 @@
 .header1 {
-    background-color: green;
+    background-color: gainsboro;
     height:100px;
   }
 .footer {
     background-color: gray;
   }
-.main {
+/*.main {
     background-color: blue;
-  }
+  } */
   .bm-burger-button {
     position: fixed;
     width: 36px;
@@ -76,7 +76,8 @@
   .button_footer {
     width: 150px !important;
     margin:4px;
-  
+    margin-top: auto;
+    
   }
   .authors {
     text-align: center
