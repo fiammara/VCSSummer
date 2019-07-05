@@ -11,7 +11,7 @@ import "./App.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const theData = [
+/*const theData = [
   {
       cat: 'PirmaKat',
       subcat: 'PirmaSubkat',
@@ -30,7 +30,7 @@ const theData = [
       city_C: 'V'
   }
 ]
-
+*/
 //const listItems = theData.map((d) => <li key={d.cat}>{d.cat+ " "}{d.subcat+ " "}{d.city_C}</li>);
 //const filterFirstCat = theData.filter(cat => cat.cat === 'AntraKat');
 //const mapFiltered = filterFirstCat.map((d) => <li key={d.cat}>{d.cat+ " "}{d.subcat+ " "}{d.city_C}</li>);
