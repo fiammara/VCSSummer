@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Button from 'react-bootstrap/Button'
+import "bootstrap/dist/css/bootstrap.css";
 class Main extends React.Component {
 
     render() {
@@ -9,7 +10,7 @@ class Main extends React.Component {
 
                 <p>Main</p>
                 <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" />
-                 <button onClick={this.props.search} > DETALI PAIEŠKA</button> 
+                 <Button  onClick={this.props.search} variant="success"> DETALI PAIEŠKA</Button> 
                 <div>
                 
                 </div>
