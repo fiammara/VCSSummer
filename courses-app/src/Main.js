@@ -21,8 +21,8 @@ class Main extends React.Component {
 
                         </div>
                     </div>
+                    <CourseCardList courses={allCourses} />
                 </div>
-                <CourseCardList courses={allCourses} />
             </div>
         );
     }

@@ -1,6 +1,6 @@
 import React from "react";
 
-class Program extends React.Component {
+class ProgramCard extends React.Component {
 
     render() {
         return (
@@ -14,8 +14,4 @@ class Program extends React.Component {
     }
 }
 
-const program = new Program();
-const InfoProgram = () => program.render();
-
-
-export default InfoProgram; 
+export default ProgramCard; 

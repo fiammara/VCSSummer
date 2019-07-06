@@ -1,10 +1,10 @@
 import React from "react";
 
-class Lector extends React.Component {
+class LectorCard extends React.Component {
     constructor(props) {
         super(props);
-        this.firstName = props.firstName;
-        this.lastName = props.lastName;
+        this.firstName = 'John';
+        this.lastName = 'Doe';
         this.img = props.img ? props.img : "";
     }
 
@@ -24,7 +24,4 @@ class Lector extends React.Component {
     }
 }
 
-const lector = new Lector("John", "Doe");
-const InfoLector = () => lector.render();
-
-export default InfoLector; 
+export default LectorCard; 

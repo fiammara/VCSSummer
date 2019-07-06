@@ -8,7 +8,7 @@ class Header extends React.Component {
     }
     render() {
         return (
-            <div className="header1 fixed-top">
+            <div className="header1 sticky-top">
                 LOGO
              <MenuSlide outerContainerId={"header2"} pageWrapId={"page-wrap"} width={'5%'} height={'5%'} right>
                     <a id="home" className="menu-item" href="/">Home</a>

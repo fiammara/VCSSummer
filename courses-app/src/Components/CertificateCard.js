@@ -1,7 +1,7 @@
 import React from 'react';
 import faker from 'faker';
 
-class Certificate extends React.Component {
+class CertificateCard extends React.Component {
     constructor(props) {
         super(props);
         this.img = faker.image.avatar;
@@ -22,4 +22,4 @@ class Certificate extends React.Component {
     }
 }
 
-export default Certificate; 
+export default CertificateCard; 

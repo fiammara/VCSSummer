@@ -1,12 +1,22 @@
 import React from 'react';
 import CourseCard from './CourseCard';
 
-const CourseCardList = ({ courses }) => {
-    console.log(courses);
-    const renderedList = courses.map((course) => {
-        return <CourseCard course={course} key={course.id} />
+class CourseCardList extends React.Component {
+
+    state = { selectedCourse: {} };
+
+    onArrowClick = (course) => {
+        this.setState({ selectedCourse: course });
+        console.log(course);
+    }
+
+    renderList = () => this.props.courses.map((course) => {
+        return <CourseCard course={course} key={course.id} onArrowClick={this.onArrowClick} />
     });
-    return <div>{renderedList}</div>
+
+    render() {
+        return <div>{this.renderList()}</div>;
+    }
 }
 
 export default CourseCardList;
