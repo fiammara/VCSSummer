@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import faker from 'faker';
 
-class Certificate extends React.Component {
+class CertificateCard extends React.Component {
     constructor(props) {
         super(props);
-        this.img = "";
+        this.img = faker.image.avatar;
         this.src = "";
     }
 
@@ -11,7 +12,7 @@ class Certificate extends React.Component {
         return (
             <div className="card-info-cert content">
                 <div className="card-info-cert-img">
-                    {/* <img src={this.img} alt="lector image" /> */}
+                    {/* <img src={this.img} alt="Certificate " /> */}
                     <i className="fas fa-certificate fa-8x"></i>
                 </div>
                 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -21,4 +22,4 @@ class Certificate extends React.Component {
     }
 }
 
-export default Certificate; 
+export default CertificateCard; 

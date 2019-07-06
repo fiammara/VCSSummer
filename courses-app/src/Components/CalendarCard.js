@@ -1,7 +1,6 @@
 import React from "react";
-import CourseCard from "./CourseCard";
 
-class CourseCalendar extends React.Component {
+class CalendarCard extends React.Component {
     constructor(props) {
         super(props);
         this.courses = props.courses;
@@ -32,4 +31,4 @@ class CourseCalendar extends React.Component {
     }
 }
 
-export default CourseCalendar; 
+export default CalendarCard; 

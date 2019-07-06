@@ -2,6 +2,9 @@ import React from 'react';
 import Button from 'react-bootstrap/Button'
 import "bootstrap/dist/css/bootstrap.css";
 import "./Main.css";
+import CourseCardList from './Components/CourseCardList';
+import { allCourses } from './Components/fakeData';
+
 class Main extends React.Component {
 
     render() {
@@ -18,6 +21,7 @@ class Main extends React.Component {
 
                         </div>
                     </div>
+                    <CourseCardList courses={allCourses} />
                 </div>
             </div>
         );

@@ -1,6 +1,5 @@
-import React from "react";
-import CourseCard from "./CourseCard";
-//import { Z_RLE } from "zlib";
+import React from 'react';
+import { allCourses } from './fakeData';
 
 class Review {
     constructor(course, review, user, date, rating) {
@@ -13,8 +12,8 @@ class Review {
 }
 
 const allReviews = [
-    new Review(CourseCard.allCourses[0], 'Very nice!', 'Someone', '2019.06.10', 5),
-    new Review(CourseCard.allCourses[1], 'Meh', 'Haxor', '2019.06.12', 2)
+    new Review(allCourses[0], 'Very nice!', 'Someone', '2019.06.10', 5),
+    new Review(allCourses[1], 'Meh', 'Haxor', '2019.06.12', 2)
 ];
 
 const calculateAverage = () => {
@@ -68,6 +67,6 @@ const render = (allReviews) => {
     );
 }
 
-const InfoReviews = () => render(allReviews);
+const infoReviews = () => render(allReviews);
 
-export default InfoReviews; 
+export default infoReviews; 

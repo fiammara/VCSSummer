@@ -1,6 +1,6 @@
 import React from "react";
 
-class Contacts extends React.Component {
+class ContactsCard extends React.Component {
     constructor(props) {
         super(props);
         this.logo = "";
@@ -31,7 +31,4 @@ class Contacts extends React.Component {
     }
 }
 
-const contacts = new Contacts();
-const InfoContacts = () => contacts.render();
-
-export default InfoContacts; 
+export default ContactsCard; 
