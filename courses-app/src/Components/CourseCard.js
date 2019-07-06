@@ -1,6 +1,6 @@
 import React from 'react';
 import CourseCardInfo from './CourseCardInfo';
-import '../App_sena_versija.css';
+import '../Components/courseCard.css';
 
 class CourseCard extends React.Component {
     constructor(props) {
