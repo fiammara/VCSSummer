@@ -6,26 +6,27 @@ class CalendarCard extends React.Component {
         this.courses = props.courses;
     }
 
-    renderCalendar() {
+    renderCalendar(el) {
         return (
-            <div className="card-info-calendar-tab">
-                <h2>ARTIMIAUSI KURSAI</h2>
+            <div className="card-info-calendar-item">
                 <div>
                     <i className="far fa-calendar-alt fa-4x"></i>
                 </div>
                 <div>
-                    <p>Data</p>
-                    <p>Laikas</p>
-                    <p>Papildoma informacija</p>
+                    <p>{el.date}</p>
+                    <p>{el.duration} d.</p>
+                    <p>{el.title}</p>
                 </div>
             </div>
+
         );
     }
 
     render() {
         return (
-            <div className="card-info-calendar content">
-                {this.courses.map(() => this.renderCalendar())}
+            <div className="card-info-calendar">
+                <h3>ARTIMIAUSI KURSAI</h3>
+                {this.courses.map((el) => this.renderCalendar(el))}
             </div>
         );
     }

@@ -4,7 +4,7 @@ import CertificateCard from './CertificateCard';
 import ContactsCard from './ContactsCard';
 import LectorCard from './LectorCard';
 import ProgramCard from './ProgramCard';
-import { infoReviews } from './ReviewCard';
+import ReviewCard from './ReviewCard';
 import { allCourses } from './fakeData';
 
 class CourseCardInfo extends React.Component {
@@ -12,8 +12,9 @@ class CourseCardInfo extends React.Component {
     state = { tab: "program" };
 
     activateTab = event => {
+        const activeCard = event.currentTarget.parentNode.parentNode.parentNode;
         const tab = event.currentTarget.getAttribute('data-tab');
-        document.querySelector('.tab-active').classList.remove('tab-active');
+        activeCard.querySelector('.tab-active').classList.remove('tab-active');
         event.currentTarget.classList.add('tab-active');
         this.setState({ tab });
     }
@@ -36,37 +37,33 @@ class CourseCardInfo extends React.Component {
 
         switch (this.state.tab) {
             case "certificate":
-                tab = <CertificateCard />;
+                tab = <CertificateCard course={this.props.course} />;
                 break;
             case "contacts":
-                tab = <ContactsCard />;
+                tab = <ContactsCard course={this.props.course} />;
                 break;
             case "calendar":
                 tab = <CalendarCard courses={allCourses} />;
                 break;
             case "lector":
-                tab = <LectorCard />;
+                tab = <LectorCard course={this.props.course} />;
                 break;
             case "reviews":
-                tab = <infoReviews />;
+                tab = <ReviewCard course={this.props.course} />;
                 break;
             default:
-                tab = <ProgramCard />;
+                tab = <ProgramCard course={this.props.course} />;
                 break;
         }
 
-        return (
-            <div>
-                {this.renderNavigation()}
-                {tab}
-            </div>
-        );
+        return tab;
     }
 
     render() {
         return (
             <div className="course-info">
-                <div className="course-info-program">{this.renderTab()}</div>
+                {this.renderNavigation()}
+                {this.renderTab()}
             </div>
         );
     }

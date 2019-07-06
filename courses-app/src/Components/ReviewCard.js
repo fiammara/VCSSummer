@@ -1,72 +1,65 @@
 import React from 'react';
-import { allCourses } from './fakeData';
 
-class Review {
-    constructor(course, review, user, date, rating) {
-        this.course = course;
-        this.review = review;
-        this.user = user;
-        this.date = date;
-        this.rating = rating
+class ReviewCard extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { reviews: this.props.course.reviews };
+        this.course = this.props.course;
     }
-}
 
-const allReviews = [
-    new Review(allCourses[0], 'Very nice!', 'Someone', '2019.06.10', 5),
-    new Review(allCourses[1], 'Meh', 'Haxor', '2019.06.12', 2)
-];
+    calculateAverage = () => {
+        let sum = 0;
+        this.state.reviews.forEach(element => {
+            sum += element.rating;
+        });
+        return (sum / this.state.reviews.length).toFixed(1);
+    }
 
-const calculateAverage = () => {
-    let sum = 0;
-    allReviews.forEach(element => {
-        sum += element.rating;
-    });
-    return sum / allReviews.length;
-}
-
-const countStars = (rating) => {
-    let finalRating = [];
-    for (let i = 0; i < 5; i++) {
-        if (i < rating) {
-            finalRating.push(<i className="fas fa-star"></i>);
-        } else {
-            finalRating.push(<i className="far fa-star"></i>);
+    countStars = (rating) => {
+        let finalRating = [];
+        for (let i = 0; i < 5; i++) {
+            if (i < rating) {
+                finalRating.push(<i className="fas fa-star"></i>);
+            } else {
+                finalRating.push(<i className="far fa-star"></i>);
+            }
         }
+        return finalRating;
     }
-    return finalRating;
+
+    renderReviews = () => this.state.reviews.map(review => {
+        return (
+            <div className="card-info-reviews-card">
+                <p>{this.countStars(review.rating)}</p>
+                <p>{review.review}</p>
+                <div>
+                    <div className="card-info-reviews-user">
+                        <p>{review.user}</p>
+                        <p>{review.date}</p>
+                    </div>
+                    <div className="card-info-reviews-buttons">
+                        <i className="far fa-thumbs-up fa-2x"></i>
+                        <i className="far fa-thumbs-down fa-2x"></i>
+                        <button>Pranešti</button>
+                    </div>
+                </div>
+            </div>
+        );
+    });
+
+
+    render = () => {
+        return (
+            <div className="card-info-reviews content">
+                <div className="card-info-reviews-top">
+                    <p><span>{this.calculateAverage()}</span> Bendras reitingas</p>
+                </div>
+                <div className="card-info-reviews-bottom">
+                    {this.renderReviews()}
+                </div>
+            </div>
+        );
+    }
 }
 
-const render = (allReviews) => {
-    return (
-        <div className="card-info-reviews content">
-            <div className="card-info-reviews-top">
-                <p><span>{calculateAverage()}</span> Bendras reitingas</p>
-            </div>
-            <div className="card-info-reviews-bottom">
-                {allReviews.map(el => {
-                    return (
-                        <div className="card-info-reviews-card">
-                            <p>{countStars(el.rating)}</p>
-                            <p>{el.review}</p>
-                            <div>
-                                <div className="card-info-reviews-user">
-                                    <p>{el.user}</p>
-                                    <p>{el.date}</p>
-                                </div>
-                                <div className="card-info-reviews-buttons">
-                                    <i className="far fa-thumbs-up fa-2x"></i>
-                                    <i className="far fa-thumbs-down fa-2x"></i>
-                                    <button>Pranešti</button>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
-            </div>
-        </div>
-    );
-}
-
-const infoReviews = () => render(allReviews);
-
-export default infoReviews; 
+export default ReviewCard; 

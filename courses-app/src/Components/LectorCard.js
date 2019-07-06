@@ -3,23 +3,21 @@ import React from "react";
 class LectorCard extends React.Component {
     constructor(props) {
         super(props);
-        this.firstName = 'John';
-        this.lastName = 'Doe';
-        this.img = props.img ? props.img : "";
+        this.lector = this.props.course.lector;
+
     }
 
     render() {
         return (
             <div className="card-info-lector content">
                 <div className="card-info-lector-img">
-                    {/* <img src={this.img} alt="lector image" /> */}
-                    <i className="fas fa-user-graduate fa-8x"></i>
-                    <p>{this.firstName} {this.lastName}</p>
+                    <img src={this.lector.photo} alt="lector" />
+                    < p > {this.lector.firstName} {this.lector.lastName}</p>
                 </div>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </div>
+                <p>Skills: {this.lector.skills}</p>
+                <p>About:</p>
+                <p>{this.lector.about}</p>
+            </div >
         );
     }
 }
