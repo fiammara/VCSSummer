@@ -26,13 +26,13 @@ class CourseCard extends React.Component {
         return finalRating;
     }
 
-    renderCourseCardInfo = () => this.state.arrowPressed === true ? <CourseCardInfo /> : '';
+    renderCourseCardInfo = () => this.state.arrowPressed === true ? <CourseCardInfo course={this.course} /> : '';
 
     renderArrowButton = () => this.state.arrowPressed === true ? 'fas fa-arrow-up fa-2x' : 'fas fa-arrow-down fa-2x';
 
     render() {
         return (
-            <div className="course-card">
+            <div className="course-card" data-id={this.props.id}>
                 <i className="far fa-bookmark fa-2x course-card-bookmark"></i>
                 <div className="course-card-top">
                     <div className="course-card-logo">

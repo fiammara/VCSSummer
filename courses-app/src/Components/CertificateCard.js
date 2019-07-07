@@ -1,22 +1,20 @@
 import React from 'react';
-import faker from 'faker';
 
 class CertificateCard extends React.Component {
     constructor(props) {
         super(props);
-        this.img = faker.image.avatar;
-        this.src = "";
+        this.cert = this.props.course.certificates[0];
     }
 
     render() {
         return (
             <div className="card-info-cert content">
                 <div className="card-info-cert-img">
-                    {/* <img src={this.img} alt="Certificate " /> */}
-                    <i className="fas fa-certificate fa-8x"></i>
+                    <img src={this.cert.logo} alt="Certificate " />
+                    <h3>{this.cert.title}</h3>
                 </div>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a href={this.src}>Link</a>
+                <p>{this.cert.about}</p>
+                <a href={this.cert.link}>Link</a>
             </div>
         );
     }
