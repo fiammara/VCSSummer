@@ -1,4 +1,5 @@
 import React from 'react';
+import ReviewItem from './ReviewItem';
 
 class ReviewCard extends React.Component {
     constructor(props) {
@@ -9,13 +10,13 @@ class ReviewCard extends React.Component {
 
     calculateAverage = () => {
         let sum = 0;
-        this.state.reviews.forEach(element => {
+        this.course.reviews.forEach(element => {
             sum += element.rating;
         });
-        return (sum / this.state.reviews.length).toFixed(1);
+        return (sum / this.course.reviews.length).toFixed(1);
     }
 
-    countStars = (rating) => {
+    renderStars = (rating) => {
         let finalRating = [];
         for (let i = 0; i < 5; i++) {
             if (i < rating) {
@@ -27,32 +28,51 @@ class ReviewCard extends React.Component {
         return finalRating;
     }
 
-    renderReviews = () => this.state.reviews.map(review => {
+    countTotal = (rating) => {
+        const length = this.course.reviews.length;
+        return {
+            total: this.course.reviews.filter(review => review.rating === rating).length,
+            get percentage() { return `${Math.round(this.total / length * 100)}%` }
+        };
+    }
+
+    onAverageClick = () => {
+        this.setState({ reviews: this.course.reviews });
+    }
+
+    onTotalRatingsClick = (event) => {
+        const rating = parseInt(event.target.getAttribute('data-total'));
+        let reviews = this.course.reviews.filter(review => review.rating === rating)
+        this.setState({ reviews });
+    }
+
+    renderReviewTotals = () => [5, 4, 3, 2, 1].map(el => {
         return (
-            <div className="card-info-reviews-card">
-                <p>{this.countStars(review.rating)}</p>
-                <p>{review.review}</p>
-                <div>
-                    <div className="card-info-reviews-user">
-                        <p>{review.user}</p>
-                        <p>{review.date}</p>
-                    </div>
-                    <div className="card-info-reviews-buttons">
-                        <i className="far fa-thumbs-up fa-2x"></i>
-                        <i className="far fa-thumbs-down fa-2x"></i>
-                        <button>Pranešti</button>
-                    </div>
-                </div>
-            </div>
+            <p>
+                {this.renderStars(el)}
+                <span
+                    className="card-info-review-totals_total"
+                    data-total={el}
+                    onClick={this.onTotalRatingsClick}>
+                    ({this.countTotal(el).total})
+                </span>
+                <span className="card-info-review-totals_percentage">{this.countTotal(el).percentage}</span>
+            </p>
         );
     });
 
+    renderReviews = () => this.state.reviews.map(review => {
+        return <ReviewItem review={review} key={review.id} renderStars={this.renderStars} />;
+    });
 
-    render = () => {
+    render() {
         return (
             <div className="card-info-reviews content">
                 <div className="card-info-reviews-top">
-                    <p><span>{this.calculateAverage()}</span> Bendras reitingas</p>
+                    <p><span className="card-info-reviews-average" onClick={this.onAverageClick}>{this.calculateAverage()}</span> Bendras reitingas</p>
+                    <div className="card-info-reviews-totals">
+                        {this.renderReviewTotals()}
+                    </div>
                 </div>
                 <div className="card-info-reviews-bottom">
                     {this.renderReviews()}

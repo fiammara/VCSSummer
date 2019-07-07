@@ -27,7 +27,7 @@ class Course {
 };
 
 
-class CourseCertificate {
+class Certificate {
     constructor(title, about, link, logo) {
         this.title = title;
         this.about = about;
@@ -63,7 +63,8 @@ class School {
 };
 
 class Review {
-    constructor(rating, user, date, review) {
+    constructor(id, rating, user, date, review) {
+        this.id = id;
         this.rating = rating;
         this.user = user;
         this.date = date;
@@ -92,7 +93,7 @@ for (let i = 0; i < 10; i++) {
         const date = faker.date.between('2019-01-01', '2019-07-06');
         const ymd = `${date.getFullYear()}-${date.getMonth() + 1 < 10 ? '0' + date.getMonth() : date.getMonth()}-${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()}`;
         const review = faker.lorem.sentence();
-        allCourses[i].reviews.push(new Review(rating, user, ymd, review));
+        allCourses[i].reviews.push(new Review(j, rating, user, ymd, review));
     };
     allCourses.forEach(el => {
         const firstName = faker.name.firstName();
@@ -112,10 +113,15 @@ for (let i = 0; i < 10; i++) {
         const phone = faker.phone.phoneNumber();
         const web = '/';
         const about = faker.lorem.paragraph();
-
         el.school = new School(name, logo, street, city, country, email, phone, web, about);
-    })
-
+    });
+    allCourses.forEach(el => {
+        const title = `Certificate of ${faker.lorem.word()}`;
+        const about = faker.lorem.sentence();
+        const link = '/';
+        const logo = 'https://ugcorigin.s-microsoft.com/100/488459bc-c120-4e7b-a179-377f9bb41fc8/200/v1/image.jpg';
+        el.certificates.push(new Certificate(title, about, link, logo));
+    });
 
 };
 
