@@ -21,7 +21,9 @@ class Main extends React.Component {
 
                         </div>
                     </div>
-                    <CourseCardList courses={allCourses} />
+                    <div className="postai">
+                        <CourseCardList courses={allCourses} />
+                    </div>
                 </div>
             </div>
         );
