@@ -22,3 +22,14 @@
 .tekstas {
   padding: 25;
 }
+
+/*title*/
+.title{
+    background-color: #d8d2d2;
+    height: 50px;
+    font-size: 28px;
+    right: 36px;
+}
+.titleName{
+  text-align: center;
+}
