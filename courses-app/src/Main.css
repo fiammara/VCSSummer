@@ -27,3 +27,14 @@
 .postai{
   margin-top: 195px;
 }
+
+/*title*/
+.title{
+    background-color: #d8d2d2;
+    height: 50px;
+    font-size: 28px;
+    right: 36px;
+}
+.titleName{
+  text-align: center;
+}
