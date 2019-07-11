@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.1.3",
+    "@material-ui/core": "^4.2.0",
     "@material-ui/icons": "^4.2.1",
     "bootstrap": "^4.3.1",
     "clsx": "^1.0.4",
     "faker": "^4.1.0",
+    "material-ui": "^0.20.2",
+    "material-ui-responsive-menu": "^1.19.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
@@ -15,6 +17,7 @@
     "react-calendar": "^2.19.0",
     "react-datepicker": "^2.7.0",
     "react-dom": "^16.8.6",
+    "react-responsive-navbar": "^1.0.11",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-select": "^3.0.4"
