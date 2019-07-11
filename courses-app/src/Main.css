@@ -38,3 +38,14 @@
 .titleName{
   text-align: center;
 }
+/*search bar*/
+.searchas2{
+    width: 100%;
+    margin-top: 25px;
+}
+.detaliP{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration-line: underline;
+}
