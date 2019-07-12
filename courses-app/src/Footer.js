@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Navbar from 'react-bootstrap/Navbar'
+import { NavLink } from 'react-router-dom';
 
 class Footer extends React.Component {
 
@@ -15,13 +16,22 @@ class Footer extends React.Component {
                 <Container >
                     <Navbar >
                         <Row>
-                            <Col><Button className="button_footer " variant="outline-primary" >DUK</Button></Col>
-                            <Col xs={6} lg={3}><Button className="button_footer" variant="outline-primary">Cookies Policy</Button></Col>
-                            <Col xs={6} lg={3}><Button className="button_footer" variant="outline-primary">Legal terms</Button></Col>
-                            <Col xs={6} lg={3}><Button className="button_footer" variant="outline-primary">Privacy Policy</Button></Col>
-                            <Col xs={6} lg={3}><Button className="button_footer" variant="outline-primary">Blog</Button></Col>
-                            <Col xs={6} lg={3}><Button className="button_footer" variant="outline-primary">Facebook</Button></Col>
-                            <Col xs={6} lg={3}><Button className="button_footer" variant="outline-primary">Contact via email</Button></Col>
+
+                            <Col>
+                                <NavLink to='/duk'>
+                                    <Button className="button_footer" variant="outline-primary" >DUK</Button></NavLink></Col>
+                            <Col xs={6} lg={3}>
+                                <Button className="button_footer" variant="outline-primary">Cookies Policy</Button></Col>
+                            <Col xs={6} lg={3}>
+                                <Button className="button_footer" variant="outline-primary">Legal terms</Button></Col>
+                            <Col xs={6} lg={3}>
+                                <Button className="button_footer" variant="outline-primary">Privacy Policy</Button></Col>
+                            <Col xs={6} lg={3}>
+                                <Button className="button_footer" variant="outline-primary">Blog</Button></Col>
+                            <Col xs={6} lg={3}>
+                                <Button className="button_footer" variant="outline-primary">Facebook</Button></Col>
+                            <Col xs={6} lg={3}>
+                                <Button className="button_footer" variant="outline-primary">Contact via email</Button></Col>
                         </Row>
                     </Navbar>
                     <div className="authors"> &copy;Vasaros projektai. All rights reserved. </div>

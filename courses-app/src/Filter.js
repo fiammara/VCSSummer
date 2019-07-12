@@ -36,13 +36,11 @@ import "react-datepicker/dist/react-datepicker.css";
 //const mapFiltered = filterFirstCat.map((d) => <li key={d.cat}>{d.cat+ " "}{d.subcat+ " "}{d.city_C}</li>);
 const kategorijos = [
 
-  { label: 'KAT1' },
-  { label: 'KAT2' },
-  { label: 'KAT3' },
-  { label: 'KAT4' },
-  { label: 'KAT5' },
-  { label: 'KAT6' },
-
+  { label: 'GROŽIS' },
+  { label: 'IT' },
+  { label: 'APSKAITA' },
+  { label: 'PARDAVIMAI' }
+ 
 ].map(suggestion => ({
   value: suggestion.label,
   label: suggestion.label,

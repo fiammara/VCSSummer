@@ -5,12 +5,14 @@ import "./Main.css";
 import CourseCardList from './Components/CourseCardList';
 import { allCourses } from './Components/fakeData';
 
-class Main extends React.Component {
+ class Main extends React.Component {
 
     render() {
 
         return (
+            
             <div className="main">
+               
                 <div className="divas">
                     <div className="textBlock">
                         <div className="tekstas">
@@ -18,7 +20,7 @@ class Main extends React.Component {
 
                             <input className="searchas" type="text" placeholder="Search.." name="search" />
                             <Button className="btn1" onClick={this.props.search} variant="primary"> Ieškoti</Button>
-
+                            
                         </div>
                     </div>
                     <div className="postai">
@@ -29,4 +31,5 @@ class Main extends React.Component {
         );
     }
 }
+
 export default Main;
