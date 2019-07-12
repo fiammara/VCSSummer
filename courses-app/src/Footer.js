@@ -1,7 +1,6 @@
 import React from 'react';
 import "./App.css";
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Navbar from 'react-bootstrap/Navbar'
@@ -13,29 +12,29 @@ class Footer extends React.Component {
         return (
 
             <div className="footer" >
-                <Container >
+         
                     <Navbar >
                         <Row>
 
-                            <Col>
+                            <Col xs={6} md={4} lg={3}>
                                 <NavLink to='/duk'>
-                                    <Button className="button_footer" variant="outline-primary" >DUK</Button></NavLink></Col>
-                            <Col xs={6} lg={3}>
-                                <Button className="button_footer" variant="outline-primary">Cookies Policy</Button></Col>
-                            <Col xs={6} lg={3}>
-                                <Button className="button_footer" variant="outline-primary">Legal terms</Button></Col>
-                            <Col xs={6} lg={3}>
-                                <Button className="button_footer" variant="outline-primary">Privacy Policy</Button></Col>
-                            <Col xs={6} lg={3}>
-                                <Button className="button_footer" variant="outline-primary">Blog</Button></Col>
-                            <Col xs={6} lg={3}>
-                                <Button className="button_footer" variant="outline-primary">Facebook</Button></Col>
-                            <Col xs={6} lg={3}>
-                                <Button className="button_footer" variant="outline-primary">Contact via email</Button></Col>
+                                    <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px'}}>DUK </Button></NavLink></Col>
+                            <Col xs={6} md={4} lg={3}>
+                            <NavLink to='/blog'>   <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>BLOGAS</Button></NavLink></Col>
+                            <Col xs={6} md={4} lg={3}>
+                                <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>SLAPUKŲ NUSTATYMAS</Button></Col>
+                            <Col xs={6} md={4} lg={3}>
+                                <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>FACEBOOK</Button></Col>
+                            <Col xs={6} md={4} lg={3}>
+                                <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>PRIVATUMO POLITIKA</Button></Col>
+                            <Col xs={6} md={4} lg={3}>
+                                <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>SUSISIEKTI</Button></Col>
+                            <Col xs={6} md={4} lg={3}>
+                                <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>ĮMONĖMS</Button></Col>
                         </Row>
                     </Navbar>
                     <div className="authors"> &copy;Vasaros projektai. All rights reserved. </div>
-                </Container>
+               
             </div>
         );
     }

@@ -3,6 +3,7 @@ import "./App.css";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
+import Collapsible from 'react-collapsible';
 class Duk extends React.Component {
 
     render() {
@@ -22,8 +23,28 @@ class Duk extends React.Component {
                 <Row>
 
                     <Col xs={2} lg={3}></Col>
-                    <Col xs={8} lg={6}><h6>Dažniausiai užduodami klausimai </h6></Col>
-                    <Col xs={2} lg={3}></Col>
+                    <Col xs={8} lg={6}><h6>Dažniausiai užduodami klausimai </h6>
+                    
+                        <Collapsible trigger="Lorem ipsum dolor sit amet consetetur">
+                            <p>Lorem ipsum content</p>
+                        </Collapsible> 
+                       <br/>
+                        <Collapsible trigger="Lorem ipsum dolor sit amet consetetur">  
+                           <p>Lorem ipsum content</p>
+                           </Collapsible>
+                        <br/>
+                        <Collapsible trigger="Lorem ipsum dolor sit amet consetetur">
+                            <p>Lorem ipsum content</p>
+                        </Collapsible>
+                        <br/>
+                        <Collapsible trigger="Lorem ipsum dolor sit amet consetetur">
+                            <p>Lorem ipsum content</p>
+                        </Collapsible>
+                        <br/>
+                    </Col>
+                    <Col xs={2} lg={3}>
+
+                    </Col>
 
                 </Row>
 
@@ -38,7 +59,7 @@ class Duk extends React.Component {
                 <Row>
                     <Col xs={2} lg={3}></Col>
                     <Col xs={8} lg={6}>
-                         <p> Ar buvo naudinga? </p>
+                        <p> Ar buvo naudinga? </p>
                         <Button> Taip </Button>  <Button> Ne </Button></Col>
                     <Col xs={2} lg={3}></Col>
                 </Row>
