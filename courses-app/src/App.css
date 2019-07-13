@@ -4,6 +4,7 @@
   }
 .footer {
     background-color: gray;
+ 
   }
 /*.main {
     background-color: blue;
@@ -73,12 +74,29 @@
   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
   }
-  .button_footer {
-    width: 150px !important;
-    margin:4px;
-    margin-top: auto;
-    
-  }
+
   .authors {
     text-align: center
   }
+  .button_footer {
+    width: 145px !important;
+    
+    padding:0px;
+    margin-top: 4px;;
+   }
+  /* .Collapsible {
+     Color:orange;
+   } 
+   .Collapsible__contentOuter
+   {
+    background-color:gray;}
+
+   .Collapsible__contentInner
+   {
+    background-color:green;}
+*/
+    .Collapsible__trigger {
+      background-color:lightgray;
+        border:solid gray 2px;     
+        width:100%
+    }
