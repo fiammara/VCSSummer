@@ -1,5 +1,5 @@
 import React from 'react';
-import CourseCardInfo from './CourseCardInfo';
+import CourseCardInfoMini from './CourseCardInfoMini';
 import '../Components/courseCard.css';
 
 class CourseCard extends React.Component {
@@ -8,7 +8,6 @@ class CourseCard extends React.Component {
         this.course = this.props.course;
         this.state = { arrowPressed: false };
     }
-
 
     onArrowClick = () => {
         this.state.arrowPressed === false ? this.setState({ arrowPressed: true }) : this.setState({ arrowPressed: false });
@@ -26,7 +25,7 @@ class CourseCard extends React.Component {
         return finalRating;
     }
 
-    renderCourseCardInfo = () => this.state.arrowPressed === true ? <CourseCardInfo course={this.course} /> : '';
+    renderCourseCardInfo = () => this.state.arrowPressed === true ? <CourseCardInfoMini course={this.course} /> : '';
 
     renderArrowButton = () => this.state.arrowPressed === true ? 'fas fa-arrow-up fa-2x' : 'fas fa-arrow-down fa-2x';
 

@@ -42,7 +42,7 @@ class ReviewCard extends React.Component {
 
     onTotalRatingsClick = (event) => {
         const rating = parseInt(event.target.getAttribute('data-total'));
-        let reviews = this.course.reviews.filter(review => review.rating === rating)
+        let reviews = this.course.reviews.filter(review => review.rating === rating);
         this.setState({ reviews });
     }
 
@@ -56,7 +56,9 @@ class ReviewCard extends React.Component {
                     onClick={this.onTotalRatingsClick}>
                     ({this.countTotal(el).total})
                 </span>
-                <span className="card-info-review-totals_percentage">{this.countTotal(el).percentage}</span>
+                <span className="card-info-review-totals_percentage">
+                    {this.countTotal(el).percentage}
+                </span>
             </p>
         );
     });
@@ -69,7 +71,11 @@ class ReviewCard extends React.Component {
         return (
             <div className="card-info-reviews content">
                 <div className="card-info-reviews-top">
-                    <p><span className="card-info-reviews-average" onClick={this.onAverageClick}>{this.calculateAverage()}</span> Bendras reitingas</p>
+                    <p>
+                        <span className="card-info-reviews-average" onClick={this.onAverageClick}>
+                            {this.calculateAverage()}
+                        </span> Bendras reitingas
+                    </p>
                     <div className="card-info-reviews-totals">
                         {this.renderReviewTotals()}
                     </div>
