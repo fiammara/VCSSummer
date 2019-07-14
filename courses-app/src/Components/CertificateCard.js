@@ -11,7 +11,7 @@ class CertificateCard extends React.Component {
             <div className="card-info-cert content">
                 <div className="card-info-cert-img">
                     <img src={this.cert.logo} alt="Certificate " />
-                    <h3>{this.cert.title}</h3>
+                    <h2>{this.cert.title}</h2>
                 </div>
                 <p>{this.cert.about}</p>
                 <a href={this.cert.link}>Link</a>

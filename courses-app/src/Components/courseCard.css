@@ -1,24 +1,25 @@
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 375px;
+  justify-content: center;
+  font-family: Roboto-Regular, Roboto;
+  color: #979797;
+}
+
 .course-card {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 100%;
-  max-width: 25em;
-  min-width: 20em;
+  flex-basis: 302px;
+  min-width: 302px;
+  max-width: 302px;
   height: auto;
-  margin: 2em;
-  padding: 2em 1em 0.5em 1em;
-  border: 1px solid grey;
-}
-
-.card-info-tabs-tab:hover {
-  color: orange;
-  cursor: pointer;
-}
-
-.tab-active:hover {
-  color: white;
-  cursor: default;
+  border: 1px solid #e7e7e9;
+  padding: 1em;
+  margin: 1em auto;
+  font-family: Roboto-Regular, Roboto;
+  color: #979797;
 }
 
 .course-card i {
@@ -37,16 +38,15 @@
 }
 
 .course-card-top,
-.course-card-bottom {
+.course-card-bottom,
+.course-info-mini {
   display: flex;
   flex-basis: 100%;
-  height: 50%;
   align-content: space-between;
 }
 
 .course-card-logo {
   flex: 1;
-  margin: 0 0.5em;
 }
 
 .logo-image {
@@ -55,11 +55,14 @@
 
 .course-card-title {
   flex: 3;
+  padding: 0 2em 0 1em;
+  font-size: 16px;
 }
 
 .course-card-bottom {
   display: flex;
   flex-wrap: nowrap;
+  margin-top: 1em;
 }
 
 .course-card-bottom-left,
@@ -67,11 +70,65 @@
   flex: 1;
   display: flex;
   flex-wrap: wrap;
+  align-content: space-between;
 }
 
 .course-card-bottom-left *,
 .course-card-bottom-right * {
   flex-basis: 100%;
+  padding: 0;
+  margin: 0.5em 0;
+}
+
+.course-card-bottom-left {
+  font-size: 8px;
+}
+
+.course-card-bottom-left i {
+  font-size: 10px;
+  margin-right: 0.5em;
+}
+
+.course-card-bottom-right {
+  font-size: 9px;
+  text-align: right;
+}
+
+.course-card-bottom-right i {
+  margin: 0 0.2em;
+}
+
+.course-card-bottom-right h2 {
+  font-size: 20px;
+}
+
+.course-info-mini {
+  flex-wrap: wrap;
+  font-size: 8px;
+}
+
+.course-info-mini p {
+  flex-basis: 100%;
+  margin: 0.5em 0;
+}
+
+.course-info-mini span {
+  margin-left: 0.5em;
+}
+
+.course-info-mini-button {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.course-info-mini button {
+  font-size: 14px;
+  padding: 0 3em;
+  font-family: Helvetica;
+  color: white;
+  background-color: #9a9a9a;
+  border: none;
 }
 
 .course-card-rating {
@@ -85,12 +142,27 @@
 
 .course-card-arrow-more {
   flex-basis: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.course-card-arrow-more:hover {
-  color: tomato;
-  transform: scale(1.1);
+.course-card-arrow {
+  height: 15px;
+  width: 15px;
+  border-left: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.course-card-arrow.pointing-bottom {
+  transform: rotate(-45deg);
+}
+
+.course-card-arrow.pointing-top {
+  transform: rotate(135deg) translate(50%, -50%);
+}
+
+.course-card-arrow:hover {
+  border-color: tomato;
   cursor: pointer;
 }
 
@@ -98,15 +170,31 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 50em;
-  border: 1px solid grey;
+  border: 1px solid #9a9a9a;
   background-color: lightgrey;
 }
 
-.card-info .content {
+[class^="card-info"].content {
   flex-basis: 100%;
-  margin: 2em;
-  padding: 1em 1em;
-  background-color: white;
+  padding: 1em 2em;
+  background-color: #f3f3f3;
+  font-family: SegoeUI, "Segoe UI";
+  font-size: 10px;
+  line-height: 20px;
+}
+
+.card-info-program.button {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.card-info-program.button button {
+  font-size: 14px;
+  padding: 0 2em;
+  font-family: Helvetica;
+  color: white;
+  background-color: #9a9a9a;
+  border: none;
 }
 
 .card-info-tabs {
@@ -121,11 +209,22 @@
   flex: 1;
   text-align: center;
   padding: 0.3em;
+  font-family: Helvetica;
+  font-size: 8px;
 }
 
 .tab-active {
-  background-color: lightgrey;
+  background-color: #f3f3f3;
+}
+
+.card-info-tabs-tab:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.tab-active:hover {
   color: white;
+  cursor: default;
 }
 
 .card-info-lector {
@@ -141,8 +240,7 @@
 }
 
 .card-info-lector-img img {
-  padding: 2em;
-  width: 100%;
+  width: 114px;
   border-radius: 50%;
 }
 
@@ -151,41 +249,50 @@
 }
 
 .card-info-calendar {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card-info-calendar {
   flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
-  background-color: lightgrey;
+  background-color: #f3f3f3;
   padding: 0 0.5em;
+  font-family: Helvetica;
 }
 
 .card-info-calendar h3 {
   flex-basis: 100%;
-  padding: 0.2em;
+  padding: 1em;
   text-align: center;
+  font-size: 10px;
 }
 
 .card-info-calendar-item {
   flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0.5em;
+  padding: 1em;
   margin-bottom: 0.5em;
   background-color: white;
 }
 
 .card-info-calendar-item p {
-  padding: 0.2em;
-  margin: 0.5em 0;
-  border: 1px solid lightgrey;
+  padding: 0.2em 2em;
+  margin-bottom: 1em;
+  background-color: #f3f3f3;
+  font-size: 8px;
+}
+
+.card-info-calendar-item p:last-of-type {
+  height: 40%;
 }
 
 .card-info-calendar-item div:first-of-type {
   flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-info-calendar-item div:first-of-type i {
+  flex-basis: 100%;
   text-align: center;
 }
 
@@ -199,16 +306,35 @@
 }
 
 .card-info-cert-img img {
-  width: 100%;
+  width: 80%;
+}
+
+.card-info-cert h2 {
+  flex-basis: 100%;
+  padding: 1em;
+  text-align: center;
+  font-size: 16px;
 }
 
 .card-info-reviews {
   display: flex;
   flex-wrap: wrap;
+  padding: 2em 3em !important;
 }
 
 .card-info-reviews-top {
   flex-basis: 100%;
+  background-color: white;
+  padding: 2em 1em;
+  margin-bottom: 2em;
+}
+
+.card-info-reviews-top p {
+  margin-bottom: 0.5em;
+}
+
+.card-info-reviews i {
+  margin: 0.2em;
 }
 
 .card-info-reviews-average {
@@ -236,8 +362,9 @@
   display: flex;
   flex-basis: 100%;
   flex-wrap: wrap;
-  margin: 0.5em 0em;
-  border: 1px solid lightgrey;
+  margin: 1em 0em;
+  padding: 0.5em;
+  background-color: white;
 }
 
 .card-info-reviews-card p {
@@ -253,22 +380,19 @@
 }
 
 .card-info-reviews-user {
-  flex: 5;
+  flex: 4;
   display: flex;
   flex-wrap: wrap;
 }
 
 .card-info-reviews-buttons {
-  flex: 1;
+  flex: 2;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .card-info-reviews-buttons i {
-  flex-basis: 10%;
-  margin: 0.5em;
 }
 
 .card-info-reviews-buttons i:hover {
@@ -277,16 +401,14 @@
 }
 
 .card-info-reviews-buttons button {
-  margin: 0.3em;
-  border: 1px solid grey;
-  border-radius: 0.3em;
+  border: none;
   background-color: white;
-  padding: 0.2em;
+  font-size: 6px;
 }
 
 .card-info-reviews-buttons button:hover {
-  background-color: lightgrey;
   cursor: pointer;
+  color: orange;
 }
 
 .card-info-contacts {
@@ -300,9 +422,85 @@
 
 .card-info-contacts-img {
   flex-basis: 100%;
-  text-align: center;
 }
 
 .card-info-contacts-img img {
+  width: 50%;
+}
+
+.card-info-contacts h3 {
+  font-size: 10px;
+}
+
+.card-info-contacts p {
+  margin: 0em;
+}
+
+.card-info-contacts.button {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.card-info-contacts.button button {
+  flex-basis: 40%;
+  font-size: 14px;
+  font-family: Helvetica;
+  color: white;
+  background-color: #9a9a9a;
+  border: none;
+}
+
+.card-info-review-form {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  padding: 1em;
+  margin: 1em 0;
+  font-size: 10px;
+  border: 1px solid #f3f3f3;
+  background-color: white;
+}
+
+.card-info-review-form form {
+  flex-basis: 100%;
+}
+
+.card-info-review-form form input,
+.card-info-review-form form textarea,
+.card-info-review-form form div {
   width: 100%;
+}
+
+.card-info-review-form label {
+  font-size: 16px;
+}
+
+.card-info-review-form * {
+  margin-bottom: 0.5em;
+}
+
+.card-info-review-form i {
+  width: auto;
+}
+
+.card-info-review-form.button {
+  margin-top: 3em;
+  border: none;
+}
+
+.card-info-review-form.button button {
+  margin: auto;
+  padding: 0 2em;
+  font-size: 14px;
+  font-family: Helvetica;
+  color: white;
+  background-color: #9a9a9a;
+  border: none;
+}
+
+.course-card-registration {
+  font-size: 10px;
+  padding: 3em;
 }

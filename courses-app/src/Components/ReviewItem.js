@@ -17,8 +17,8 @@ class ReviewItem extends React.Component {
                         <p>{this.review.date}</p>
                     </div>
                     <div className="card-info-reviews-buttons">
-                        <i className="far fa-thumbs-up"></i>
-                        <i className="far fa-thumbs-down"></i>
+                        <i className="far fa-thumbs-up fa-2x"></i>
+                        <i className="far fa-thumbs-down fa-2x"></i>
                         <button>Pranešti</button>
                     </div>
                 </div>

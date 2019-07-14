@@ -67,6 +67,23 @@ class ReviewCard extends React.Component {
         return <ReviewItem review={review} key={review.id} renderStars={this.renderStars} />;
     });
 
+    renderForm() {
+        return (
+            <form>
+                <label>Palikti atsiliepimą</label>
+                <div>{this.renderStars(0)}</div>
+                <textarea></textarea>
+                <p>Vartotojo vardas:</p>
+                <input label="username" type="text" />
+                <p>Data</p>
+                <input label="username" type="text" />
+                <div className="card-info-review-form button">
+                    <button>Pateikti</button>
+                </div>
+            </form>
+        );
+    }
+
     render() {
         return (
             <div className="card-info-reviews content">
@@ -82,6 +99,9 @@ class ReviewCard extends React.Component {
                 </div>
                 <div className="card-info-reviews-bottom">
                     {this.renderReviews()}
+                </div>
+                <div className="card-info-review-form">
+                    {this.renderForm()}
                 </div>
             </div>
         );
