@@ -1,18 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class CourseCardInfoMini extends React.Component {
-
-    state = { showMoreInfo: false }
-
-    onButtonClick = event => {
-        if (this.state.showMoreInfo) {
-            console.log('clicked');
-            this.setState({ showMoreInfo: false })
-        } else {
-            console.log('aga');
-            this.setState({ showMoreInfo: true })
-        }
-    }
 
     renderMiniInfo = () => {
         return (
@@ -23,7 +12,9 @@ class CourseCardInfoMini extends React.Component {
                 <p>Sertifikatas: <span className="course-info-mini-content">Beginnner</span></p>
                 <p>Atsiliepimai: <span className="course-info-mini-content">Beginnner</span></p>
                 <p>Top skillsai: <span className="course-info-mini-content">Beginnner</span></p>
-                <button onClick={() => this.onButtonClick()}>{this.state.showMoreInfo ? 'Mažiau' : 'Daugiau'}</button>
+                <Link to={`/courses/${this.props.course.id}`}>
+                    <button>Daugiau</button>
+                </Link>
             </div>
         )
     }

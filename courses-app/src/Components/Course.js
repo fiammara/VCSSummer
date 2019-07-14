@@ -1,4 +1,5 @@
 import React from 'react';
+import CourseCard from './CourseCard';
 import CalendarCard from './CalendarCard';
 import CertificateCard from './CertificateCard';
 import ContactsCard from './ContactsCard';
@@ -7,9 +8,8 @@ import ProgramCard from './ProgramCard';
 import ReviewCard from './ReviewCard';
 import { allCourses } from './fakeData';
 
-class CourseCardInfo extends React.Component {
-
-    state = { tab: "program" };
+class Course extends React.Component {
+    state = { tab: "program", course: allCourses[this.props.match.params.id] };
 
     activateTab = event => {
         const activeCard = event.currentTarget.parentNode.parentNode.parentNode;
@@ -37,31 +37,32 @@ class CourseCardInfo extends React.Component {
 
         switch (this.state.tab) {
             case "certificate":
-                tab = <CertificateCard course={this.props.course} />;
+                tab = <CertificateCard course={this.state.course} />;
                 break;
             case "contacts":
-                tab = <ContactsCard course={this.props.course} />;
+                tab = <ContactsCard course={this.state.course} />;
                 break;
             case "calendar":
                 tab = <CalendarCard courses={allCourses} />;
                 break;
             case "lector":
-                tab = <LectorCard course={this.props.course} />;
+                tab = <LectorCard course={this.state.course} />;
                 break;
             case "reviews":
-                tab = <ReviewCard course={this.props.course} />;
+                tab = <ReviewCard course={this.state.course} />;
                 break;
             default:
-                tab = <ProgramCard course={this.props.course} />;
+                tab = <ProgramCard course={this.state.course} />;
                 break;
         }
-
         return tab;
     }
 
     render() {
+        console.log(this.props);
         return (
             <div className="course-info">
+                <CourseCard course={this.state.course} />
                 {this.renderNavigation()}
                 {this.renderTab()}
             </div>
@@ -69,4 +70,4 @@ class CourseCardInfo extends React.Component {
     }
 };
 
-export default CourseCardInfo;
+export default Course;
