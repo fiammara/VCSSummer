@@ -1,4 +1,5 @@
 import React from "react";
+// import { Link } from 'react-router-dom';
 
 class CalendarCard extends React.Component {
     constructor(props) {
@@ -10,7 +11,8 @@ class CalendarCard extends React.Component {
         return (
             <div className="card-info-calendar-item">
                 <div>
-                    <i className="far fa-calendar-alt fa-4x"></i>
+                    <i className="far fa-calendar-alt fa-3x" />
+                    {/* <Link to={`/courses/${el.id}`}><button onClick={() => this.props.handleSelectedCourse(el.id)}>More</button></Link> */}
                 </div>
                 <div>
                     <p>{el.date}</p>
