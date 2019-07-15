@@ -6,7 +6,7 @@ class ReviewItem extends React.Component {
         this.review = this.props.review;
     }
 
-    render = () => {
+    render() {
         return (
             <div className="card-info-reviews-card">
                 <p>{this.props.renderStars(this.review.rating)}</p>

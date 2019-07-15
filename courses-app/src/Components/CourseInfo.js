@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CalendarCard from './CalendarCard';
 import CertificateCard from './CertificateCard';
 import ContactsCard from './ContactsCard';
@@ -7,8 +8,7 @@ import ProgramCard from './ProgramCard';
 import ReviewCard from './ReviewCard';
 import { allCourses } from './fakeData';
 
-class CourseCardInfo extends React.Component {
-
+class CourseInfo extends React.Component {
     state = { tab: "program" };
 
     activateTab = event => {
@@ -22,12 +22,24 @@ class CourseCardInfo extends React.Component {
     renderNavigation() {
         return (
             <div className="card-info-tabs">
-                <div className="card-info-tabs-tab tab-active" data-tab="program" onClick={this.activateTab}><i className="fas fa-info-circle fa-2x" /></div>
-                <div className="card-info-tabs-tab" data-tab="lector" onClick={this.activateTab}><i className="fas fa-user-tie fa-2x" /></div>
-                <div className="card-info-tabs-tab" data-tab="calendar" onClick={this.activateTab}><i className="fas fa-calendar-alt fa-2x" /></div>
-                <div className="card-info-tabs-tab" data-tab="certificate" onClick={this.activateTab}><i className="fas fa-certificate fa-2x" /></div>
-                <div className="card-info-tabs-tab" data-tab="reviews" onClick={this.activateTab}><i className="fas fa-comments fa-2x" /></div>
-                <div className="card-info-tabs-tab" data-tab="contacts" onClick={this.activateTab}><i className="fas fa-envelope fa-2x" /></div>
+                <div className="card-info-tabs-tab tab-active" data-tab="program" onClick={this.activateTab}>
+                    PROGRAMA
+                </div>
+                <div className="card-info-tabs-tab" data-tab="lector" onClick={this.activateTab}>
+                    LEKTORIUS
+                </div>
+                <div className="card-info-tabs-tab" data-tab="calendar" onClick={this.activateTab}>
+                    KALENDORIUS
+                </div>
+                <div className="card-info-tabs-tab" data-tab="certificate" onClick={this.activateTab}>
+                    SERTIFIKATAS
+                </div>
+                <div className="card-info-tabs-tab" data-tab="reviews" onClick={this.activateTab}>
+                    ATSILIEPIMAI
+                </div>
+                <div className="card-info-tabs-tab" data-tab="contacts" onClick={this.activateTab}>
+                    KONTAKTAI
+                </div>
             </div >
         );
     }
@@ -43,7 +55,7 @@ class CourseCardInfo extends React.Component {
                 tab = <ContactsCard course={this.props.course} />;
                 break;
             case "calendar":
-                tab = <CalendarCard courses={allCourses} />;
+                tab = <CalendarCard courses={allCourses} handleSelectedCourse={this.handleSelectedCourse} />;
                 break;
             case "lector":
                 tab = <LectorCard course={this.props.course} />;
@@ -55,8 +67,16 @@ class CourseCardInfo extends React.Component {
                 tab = <ProgramCard course={this.props.course} />;
                 break;
         }
-
         return tab;
+    }
+
+    renderRegistration() {
+        return (
+            <div className="course-card-registration">
+                <span>REGISTRACIJA </span>
+                <Link to='/'>  Random registration link</Link>
+            </div>
+        );
     }
 
     render() {
@@ -64,9 +84,10 @@ class CourseCardInfo extends React.Component {
             <div className="course-info">
                 {this.renderNavigation()}
                 {this.renderTab()}
+                {this.renderRegistration()}
             </div>
         );
     }
 };
 
-export default CourseCardInfo;
+export default CourseInfo;

@@ -15,7 +15,6 @@ class LectorCard extends React.Component {
                     < p > {this.lector.firstName} {this.lector.lastName}</p>
                 </div>
                 <p>Skills: {this.lector.skills}</p>
-                <p>About:</p>
                 <p>{this.lector.about}</p>
             </div >
         );
