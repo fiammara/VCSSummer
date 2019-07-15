@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -36,29 +35,6 @@ class Header extends Component{
   componentWillMount(){
     if(window.innerWidth <= 600){
       this.setState({drawerActivate:true});
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import "./App.css";
-import { slide as MenuSlide } from 'react-burger-menu'
-
-class Header extends React.Component {
-    showSettings(event) {
-        event.preventDefault();
-    }
-    render() {
-        return (
-            <div className="header1 sticky-top">
-                <Link to="/">LOGO</Link>
-                <MenuSlide outerContainerId={"header2"} pageWrapId={"page-wrap"} width={'5%'} height={'5%'} right>
-                    <a id="home" className="menu-item" href="/">Home</a>
-                    <a id="about" className="menu-item" href="/about">About</a>
-                    <a id="contact" className="menu-item" href="/contact">Contact</a>
-                    <a onClick={this.showSettings} className="menu-item--small" href="">Settings</a>
-                </MenuSlide>
-            </div>
-        );
->>>>>>> 03d27f6aa183d001e0ee867ec8cf7e855a68137d
     }
 
     window.addEventListener('resize',()=>{
@@ -78,12 +54,12 @@ class Header extends React.Component {
         <AppBar >
           <Toolbar>
             <Grid container direction = "row" justify = "space-between" alignItems="center">
-              <MenuIcon
-                className = {this.props.classes.sideBarIcon}
-                onClick={()=>{this.setState({drawer:true})}} />
 
               <Typography color="inherit" variant = "headline">LOGO</Typography>
               <Typography color="inherit" variant = "headline">o kas cia? divas tipo</Typography>
+              <MenuIcon
+                className = {this.props.classes.sideBarIcon}
+                onClick={()=>{this.setState({drawer:true; anchor:right})}} />
             </Grid>
           </Toolbar>
         </AppBar>

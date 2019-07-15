@@ -7,47 +7,12 @@ import Blog from "./Blog";
 import Duk from "./Duk";
 import Course from "./Components/Course"
 import "./App.css";
-<<<<<<< HEAD
-import { createBrowserHistory } from 'history';
-
-class App extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.handleMain = this.handleMain.bind(this);
-    
-
-
-    }
-    state = {
-        showFilter: false
-    }
-    handleMain() {
-        this.setState({
-            showFilter: true,
-        });
-    }
-    render() {
-
-        if (this.state.showFilter === false) {
-            return (
-                <div>
-                    <Router history={createBrowserHistory()}>
-                    <Header />
-                    <Main search={this.handleMain} />
-                    <Footer />
-                    </Router>
-                </div>)
-        }
-
-=======
 import { Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
 
     render() {
 
->>>>>>> 03d27f6aa183d001e0ee867ec8cf7e855a68137d
         return (
             <div>
                 <Router history={createBrowserHistory()}>
