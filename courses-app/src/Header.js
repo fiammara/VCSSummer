@@ -6,6 +6,7 @@ import {
   withStyles, Grid, SwipeableDrawer
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from 'react-router-dom';
 
 const styleSheet = {
   list : {
@@ -57,8 +58,8 @@ class Header extends Component{
                 className = {this.props.classes.sideBarIcon}
                 onClick={()=>{this.setState({drawer:true})}} />
 
-              <Typography color="inherit" variant = "headline">Title</Typography>
-              <Typography color="inherit" variant = "headline"></Typography>
+              <Typography color="inherit" variant = "headline">LOGO</Typography>
+              <Typography color="inherit" variant = "headline">o kas cia? divas tipo</Typography>
             </Grid>
           </Toolbar>
         </AppBar>
@@ -75,7 +76,7 @@ class Header extends Component{
              onKeyDown={()=>{this.setState({drawer:false})}}>
 
             <List className = {this.props.classes.list}>
-               <ListItem key = {1} button divider>Kategorijos </ListItem>
+               <ListItem key = {1} button divider><Link to="/Filter" /> Kategorijos </ListItem>
                <ListItem key = {2} button divider> Kalendorius </ListItem>
                <ListItem key = {3} button divider> Blog'as </ListItem>
                <ListItem key = {1} button divider> Asmeninis profilis </ListItem>
@@ -98,7 +99,7 @@ class Header extends Component{
         <Toolbar>
           <Typography variant = "headline" style={{flexGrow:1}} color="inherit" onClick=
           "#" >LOGO</Typography>
-          <Typography variant = "subheading" className = {classes.padding} color="inherit" >Kategorijos</Typography>
+          <Typography variant = "subheading" className = {classes.padding} color="inherit" ><Link to="/Filter" />Kategorijos</Typography>
           <Typography variant = "subheading" className = {classes.padding} color="inherit" >Kalendorius</Typography>
           <Typography variant = "subheading" className = {classes.padding} color="inherit" >Blog'as</Typography>
           <Typography variant = "subheading" className = {classes.padding} color="inherit" >Asmeninis profilis</Typography>
