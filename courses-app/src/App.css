@@ -79,24 +79,11 @@
     text-align: center
   }
   .button_footer {
-    width: 145px !important;
-    
+    width: 145px !important;    
     padding:0px;
     margin-top: 4px;;
    }
-  /* .Collapsible {
-     Color:orange;
-   } 
-   .Collapsible__contentOuter
-   {
-    background-color:gray;}
-
-   .Collapsible__contentInner
-   {
-    background-color:green;}
-*/
-    .Collapsible__trigger {
-      background-color:lightgray;
-        border:solid gray 2px;     
-        width:100%
-    }
+  #panel2a-header {
+    background-color: lightslategray
+  }
+ 
