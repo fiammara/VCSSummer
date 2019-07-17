@@ -15,6 +15,7 @@ class App extends React.Component {
 
         return (
             <div>
+                <Router history={createBrowserHistory()}>
                 <Header />
 
                 <Switch>
@@ -30,8 +31,11 @@ class App extends React.Component {
                 </Switch>
 
                 <Footer />
+                </Router>
             </div>)
     }
+
+    
 }
 
 export default App;
