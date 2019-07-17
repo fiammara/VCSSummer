@@ -59,7 +59,7 @@ class Header extends Component{
               <Typography color="inherit" variant = "headline">o kas cia? divas tipo</Typography>
               <MenuIcon
                 className = {this.props.classes.sideBarIcon}
-                onClick={()=>{this.setState({drawer:true; anchor:right})}} />
+                onClick={()=>{this.setState({drawer:true, anchor:right})}} />
             </Grid>
           </Toolbar>
         </AppBar>
