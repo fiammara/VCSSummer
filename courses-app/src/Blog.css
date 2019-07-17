@@ -1,30 +1,71 @@
-.item1 { grid-area: header; }
-.item2 { grid-area: imgPost; }
-.item3 { grid-area: postText; }
-.item4 { grid-area: postAuthor; }
-.item5 { grid-area: postData; }
-.item6 { grid-area: post; height: 75px}
-.item7 { grid-area: postButton; }
-
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-  'header header header header header header'
-  ' imgPost imgPost postText postText postText postText'
-  ' imgPost imgPost postAuthor postAuthor postData postData'
-  ' post post post post post post'
-  ' postButton postButton postButton postButton postButton postButton';
-  
-  
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
+.blogPost{
+  width: 100%;
+  margin-top: 10px;
+  height: 350px;
+  border: black 2px solid;
 }
-
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+.blog1{
+width: 130px;
+    height: 155px;
+}
+.blog2{
+    width: 176px;
+    height: 155px;
+    position: relative;
+    top: -155px;
+    left: 130px;
+}
+.blog3{
+    width: 100%;
+    height: 191px;
+    position: relative;
+    bottom: 155px;
+}
+.blogImg{
+  width: 80%;
+    height: 70%;
+    position: relative;
+    left: 12px;
+    top: 11px;
+}
+.blogTitleH{
+  font-size: 12px;
+  padding-top: 13px;
+}
+.blogAuthorImg{
+    width: 40px;
+    height: 41px;
+    margin-top: 27px;
+}
+.blogAuthor{
+  width: 81px;
+  margin-top: -37px;
+  margin-left: 43px;
+}
+.blogAuthor h3{
+  
+  font-size: 12px;
+}
+.blogDate h3{
+  font-size: 12px;
+}
+.blogDate{
+  width: 60px;
+    margin-left: 108px;
+}
+.blogImg img{
+  height: -webkit-fill-available;
+  border: black 1px solid;
+}
+.blogAuthorImg img{
+  height: -webkit-fill-available;
+}
+.blogTextwBtn p{
+  padding: 1px 25px 0px 25px;
+}
+.blogTextwBtn button{
+  position: relative;
+  left: 58px;
+  font-size: 26px;
+  width: 205px;
 }
