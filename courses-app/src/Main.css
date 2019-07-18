@@ -23,9 +23,11 @@
 .tekstas {
   padding: 25;
   margin-top: 195px;
+  margin-left: -27px;
 }
 .postai{
   margin-top: 195px;
+  margin-right: 36px;
 }
 
 /*title*/
