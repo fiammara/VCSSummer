@@ -59,7 +59,11 @@ class Header extends Component{
               <Typography color="inherit" variant = "headline">o kas cia? divas tipo</Typography>
               <MenuIcon
                 className = {this.props.classes.sideBarIcon}
+<<<<<<< HEAD
                 onClick={()=>{this.setState({drawer:true, anchor:right})}} />
+=======
+                onClick={()=>{this.setState({drawer:true})}} />
+>>>>>>> 10c90e77c75434e6851afe22082f62d5614c6e2a
             </Grid>
           </Toolbar>
         </AppBar>
@@ -122,7 +126,5 @@ class Header extends Component{
 Header.propTypes = {
   classes : PropTypes.object.isRequired
 };
-
-
 
 export default withStyles(styleSheet)(Header);
