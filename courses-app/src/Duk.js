@@ -13,7 +13,7 @@ class Duk extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className="duk">
                 <Container>
                 <Typography align="left"> Užduokite klausimą?</Typography>
 
