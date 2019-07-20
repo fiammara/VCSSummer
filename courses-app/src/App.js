@@ -8,6 +8,7 @@ import Duk from "./Duk";
 import Course from "./Components/Course";
 import AuthPage from "./AuthPage";
 import Personal from "./Personal"
+import Signup from "./Signup"
 import "./App.css";
 import { Route, Switch } from 'react-router-dom';
 

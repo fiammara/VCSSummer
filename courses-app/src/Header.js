@@ -55,15 +55,14 @@ class Header extends Component {
           <Toolbar>
             <Grid container direction="row" justify="space-between" alignItems="center">
 
-              <Typography color="inherit" variant="headline">LOGO</Typography>
-              <Typography color="inherit" variant="headline">o kas cia? divas tipo</Typography>
+              <Typography color="inherit" variant="headline">{<Link to="/">LOGO</Link>}</Typography>
+              <Typography color="inherit" variant="headline">Title</Typography>
               <MenuIcon
                 className={this.props.classes.sideBarIcon}
                 onClick={() => { this.setState({ drawer: true }) }} />
             </Grid>
           </Toolbar>
         </AppBar>
-
 
         <SwipeableDrawer anchor="right"
           open={this.state.drawer}
@@ -89,7 +88,6 @@ class Header extends Component {
 
           </div>
         </SwipeableDrawer>
-
 
       </div>
     );
