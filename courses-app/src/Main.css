@@ -23,9 +23,11 @@
 .tekstas {
   padding: 25;
   margin-top: 195px;
+  margin-left: -31px;
 }
 .postai{
   margin-top: 195px;
+  margin-right: 29px;
 }
 
 /*title*/
@@ -34,6 +36,7 @@
     height: 50px;
     font-size: 28px;
     right: 36px;
+    margin-top: 57px;
 }
 .titleName{
   text-align: center;
@@ -48,4 +51,14 @@
     text-align: center;
     margin-top: 10px;
     text-decoration-line: underline;
+}
+/*blog*/
+.intro1{
+    font-size:24px;
+    margin-top:23px;
+}
+.search1{
+    width: 100%;
+    margin-top: 17px;
+    border: black 1px solid;
 }

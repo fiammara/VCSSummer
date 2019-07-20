@@ -19,7 +19,7 @@ import { allCourses } from './Components/fakeData';
                             <h2>Lorem ipsum dolor sit<span> amet, consetetur </span>sadipscing elitr, sed diam nonumy eirmod tempor?</h2>
 
                             <input className="searchas" type="text" placeholder="Search.." name="search" />
-                            <Button className="btn1" onClick={this.props.search} variant="primary"> Ieškoti</Button>
+                            <Button className="btn1" href="/Filter" variant="primary"> Ieškoti</Button>
                             
                         </div>
                     </div>
