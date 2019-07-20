@@ -5,7 +5,8 @@ import Main from "./Main";
 import Filter from "./Filter";
 import Blog from "./Blog";
 import Duk from "./Duk";
-import Course from "./Components/Course"
+import Course from "./Components/Course";
+import AuthPage from "./AuthPage";
 import "./App.css";
 import { Route, Switch } from 'react-router-dom';
 
@@ -25,8 +26,8 @@ class App extends React.Component {
                     <Route exact path="/blog" component={Blog}></Route>
                     {/*  <Route exact path="/calendar" component={Calendar}></Route>
                     <Route exact path="/personal" component={Personal}></Route>
-                    <Route exact path="/signup" component={Signup}></Route>
-                    <Route exact path="/login" component={Login}></Route> */}
+                    <Route exact path="/signup" component={Signup}></Route> */}
+                    <Route exact path="/auth" component={AuthPage}></Route>
                 </Switch>
 
                 <Footer />
