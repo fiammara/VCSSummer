@@ -3,24 +3,27 @@ import Login from './Login';
 import Signup from './Signup';
 
 class AuthPage extends Component {
-  state = { activeTab: "login" }
+  state = { activeTab: 'login' }
 
-  handleClick = target => {
-    this.setState({ activeTab: target.target.getAttribute("data-tab") });
+  handleClick = e => {
+    console.log(e);
+    this.setState({ activeTab: e.target.getAttribute('data-tab') });
+    document.querySelector('.tab-active').classList.remove('tab-active');
+    e.target.classList.add('tab-active');
   }
 
   render() {
     return (
-      <div style={{ position: "relative", width: "375px", height: "1wh", margin: "auto",  marginTop: "64px" }} >
-        <div className="auth-tabs">
-          <div className="auth-tab" data-tab="login" onClick={this.handleClick}>
+      <div style={{ position: "relative", width: "375px", height: "1wh", margin: "auto", marginTop: "64px" }} >
+        <div className="auth-tabs flex flex-center">
+          <div className="auth-tab tab-active flex-1 flex flex-center" data-tab="login" onClick={this.handleClick}>
             LOG IN
           </div>
-          <div className="auth-tab" data-tab="signup" onClick={this.handleClick}>
+          <div className="auth-tab flex-1 flex flex-center" data-tab="signup" onClick={this.handleClick}>
             SIGN UP
           </div>
         </div>
-        {this.state.activeTab === "login" ? <Login /> : <Signup />}
+        {this.state.activeTab === "login" ? <Login active="true" /> : <Signup active="true" />}
       </div>
     );
   };
