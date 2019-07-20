@@ -64,7 +64,8 @@ class Header extends Component {
           </Toolbar>
         </AppBar>
 
-        <SwipeableDrawer
+
+        <SwipeableDrawer anchor="right"
           open={this.state.drawer}
           onClose={() => { this.setState({ drawer: false }) }}
           onOpen={() => { this.setState({ drawer: true }) }}>
@@ -76,11 +77,11 @@ class Header extends Component {
             onKeyDown={() => { this.setState({ drawer: false }) }}>
 
             <List className={this.props.classes.list}>
-              <ListItem key={1} button divider><Link to="/Filter" /> Kategorijos </ListItem>
-              <ListItem key={2} button divider> Kalendorius </ListItem>
-              <ListItem key={3} button divider> Blog'as </ListItem>
-              <ListItem key={1} button divider> Asmeninis profilis </ListItem>
-              <ListItem key={2} button divider> DUK </ListItem>
+             <ListItem key = {1} button divider>{<Link to="/filter" > Kategorijos </Link>}</ListItem>
+               <ListItem key = {2} button divider>{<Link to="/calendar"> Kalendorius </Link>}</ListItem>
+               <ListItem key = {3} button divider>{<Link to="/blog"> Blog'as</Link>}</ListItem>
+               <ListItem key = {1} button divider>{<Link to="/personal"> Asmeninis profilis</Link>}</ListItem>
+               <ListItem key = {2} button divider>{<Link to="/duk">DUK</Link>}</ListItem>
               <ListItem key={3} button divider>
                 <Link to="/auth">Prisijungimas</Link>
               </ListItem>
@@ -88,6 +89,7 @@ class Header extends Component {
 
           </div>
         </SwipeableDrawer>
+
 
       </div>
     );
@@ -100,9 +102,8 @@ class Header extends Component {
 
       <AppBar position="fixed">
         <Toolbar>
-          <Typography variant="headline" style={{ flexGrow: 1 }} color="inherit" onClick=
-            "#" >LOGO</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" ><Link to="/Filter" />Kategorijos</Typography>
+          <Typography variant = "headline" style={{flexGrow:1}} color="inherit" >{<Link to="/">LOGO</Link>}</Typography>
+          <Typography variant="subheading" className={classes.padding} color="inherit" ><Link to="/filter" />Kategorijos</Typography>
           <Typography variant="subheading" className={classes.padding} color="inherit" >Kalendorius</Typography>
           <Typography variant="subheading" className={classes.padding} color="inherit" >Blog'as</Typography>
           <Typography variant="subheading" className={classes.padding} color="inherit" >Asmeninis profilis</Typography>
