@@ -13,7 +13,7 @@ class Footer extends React.Component {
 
             <div className="footer" >
          
-                    <Navbar >
+                    <Navbar>
                         <Row>
 
                             <Col xs={6} md={4} lg={3}>

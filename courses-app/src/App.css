@@ -21,7 +21,18 @@
 .duk {
     padding-top:70px
   }
-  
+
+  /* PERSONAL starts------------*/
+
+.personalPage {
+ padding-top:70px
+}
+.photo {
+  width: 50px}
+
+#panel2a-header2 {
+  background-color: burlywood
+}
 /* app css*/
 
 .MuiGrid-container {

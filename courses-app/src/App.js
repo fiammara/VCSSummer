@@ -6,6 +6,7 @@ import Filter from "./Filter";
 import Blog from "./Blog";
 import Duk from "./Duk";
 import Course from "./Components/Course"
+import Personal from "./Personal"
 import "./App.css";
 import { Route, Switch } from 'react-router-dom';
 
@@ -23,8 +24,8 @@ class App extends React.Component {
                     <Route exact path="/filter" component={Filter}></Route>
                     <Route exact path="/duk" component={Duk}></Route>
                     <Route exact path="/blog" component={Blog}></Route>
-                    {/*  <Route exact path="/calendar" component={Calendar}></Route>
                     <Route exact path="/personal" component={Personal}></Route>
+                    {/*  <Route exact path="/calendar" component={Calendar}></Route>                   
                     <Route exact path="/signup" component={Signup}></Route>
                     <Route exact path="/login" component={Login}></Route> */}
                 </Switch>

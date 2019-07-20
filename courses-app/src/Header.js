@@ -79,7 +79,7 @@ class Header extends Component{
                <ListItem key = {1} button divider>{<Link to="/filter" > Kategorijos </Link>}</ListItem>
                <ListItem key = {2} button divider>{<Link to="/calendar"> Kalendorius </Link>}</ListItem>
                <ListItem key = {3} button divider>{<Link to="/blog"> Blog'as</Link>}</ListItem>
-               <ListItem key = {1} button divider>{<Link to=""> Asmeninis profilis</Link>}</ListItem>
+               <ListItem key = {1} button divider>{<Link to="/personal"> Asmeninis profilis</Link>}</ListItem>
                <ListItem key = {2} button divider>{<Link to="/duk">DUK</Link>}</ListItem>
                <ListItem key = {3} button divider>{<Link to=""> Prisijungimas</Link>}</ListItem>
              </List>
