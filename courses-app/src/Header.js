@@ -101,11 +101,11 @@ class Header extends Component {
       <AppBar position="fixed">
         <Toolbar>
           <Typography variant = "headline" style={{flexGrow:1}} color="inherit" >{<Link to="/">LOGO</Link>}</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" ><Link to="/filter" />Kategorijos</Typography>
+          <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/filter" >Kategorijos </Link>}</Typography>
           <Typography variant="subheading" className={classes.padding} color="inherit" >Kalendorius</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" >Blog'as</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" >Asmeninis profilis</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" >DUK</Typography>
+          <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/blog" >Blog'as </Link>}</Typography>
+          <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/personal" >Asmeninis profilis </Link>}</Typography>
+          <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/duk" >DUK </Link>}</Typography>
           <Typography variant="subheading" className={classes.padding} color="inherit" >
             <Link to="/auth" style={{ color: "white" }}>Prisijungimas</Link>
           </Typography>
