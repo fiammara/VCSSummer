@@ -23,7 +23,6 @@ const styleSheet = {
     cursor: "pointer",
   },
 }
-
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -102,7 +101,7 @@ class Header extends Component {
         <Toolbar>
           <Typography variant = "headline" style={{flexGrow:1}} color="inherit" >{<Link to="/">LOGO</Link>}</Typography>
           <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/filter" >Kategorijos </Link>}</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" >Kalendorius</Typography>
+          <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/calendar" >Kalendorius </Link>}</Typography>
           <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/blog" >Blog'as </Link>}</Typography>
           <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/personal" >Asmeninis profilis </Link>}</Typography>
           <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/duk" >DUK </Link>}</Typography>

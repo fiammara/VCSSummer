@@ -1,10 +1,8 @@
 import React from 'react';
 import "./App.css";
-import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Navbar from 'react-bootstrap/Navbar'
+import Button from '@material-ui/core/Button';
 import { NavLink } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
 
 class Footer extends React.Component {
 
@@ -12,29 +10,35 @@ class Footer extends React.Component {
         return (
 
             <div className="footer" >
-         
-                    <Navbar>
-                        <Row>
 
-                            <Col xs={6} md={4} lg={3}>
-                                <NavLink to='/duk'>
-                                    <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px'}}>DUK </Button></NavLink></Col>
-                            <Col xs={6} md={4} lg={3}>
-                            <NavLink to='/blog'>   <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>BLOGAS</Button></NavLink></Col>
-                            <Col xs={6} md={4} lg={3}>
-                                <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>SLAPUKŲ NUSTATYMAS</Button></Col>
-                            <Col xs={6} md={4} lg={3}>
-                                <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>FACEBOOK</Button></Col>
-                            <Col xs={6} md={4} lg={3}>
-                                <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>PRIVATUMO POLITIKA</Button></Col>
-                            <Col xs={6} md={4} lg={3}>
-                                <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>SUSISIEKTI</Button></Col>
-                            <Col xs={6} md={4} lg={3}>
-                                <Button className="button_footer" variant="outline-light" style={{ fontSize: '10px' }}>ĮMONĖMS</Button></Col>
-                        </Row>
-                    </Navbar>
-                    <div className="authors"> &copy;Vasaros projektai. All rights reserved. </div>
-               
+                <Grid container spacing={2}>
+                    <Grid item xs={6} md={3}>
+                        <NavLink to='/duk'>
+                            <Button className="button_footer" variant="outlined" color="default" style={{ fontSize: '10px' }}>DUK </Button></NavLink>
+                    </Grid>
+                    <Grid item xs={6} md={3}>
+                        <NavLink to='/blog'>   <Button className="button_footer" variant="outlined" color="default" style={{ fontSize: '10px' }}>BLOGAS</Button></NavLink>
+                    </Grid>
+
+                    <Grid item xs={6} md={3}>
+                        <Button className="button_footer" variant="outlined" color="default" style={{ fontSize: '10px' }}>SLAPUKŲ NUSTATYMAS</Button>
+                    </Grid>
+                    <Grid item xs={6} md={3}>
+                        <Button className="button_footer" variant="outlined" color="default" style={{ fontSize: '10px' }}>FACEBOOK</Button>
+                    </Grid>
+                    <Grid item xs={6} md={3}>
+                        <Button className="button_footer" variant="outlined" color="default" style={{ fontSize: '10px' }}>PRIVATUMO POLITIKA</Button>
+                    </Grid>
+                    <Grid item xs={6} md={3}>
+                        <Button className="button_footer" variant="outlined" color="default" style={{ fontSize: '10px' }}>SUSISIEKTI</Button>
+                    </Grid>
+                    <Grid item xs={6} md={3}>
+                        <Button className="button_footer" variant="outlined" color="default" style={{ fontSize: '10px' }}>ĮMONĖMS</Button>
+                    </Grid>
+                </Grid>
+                <br />
+                <div className="authors"> &copy;Vasaros projektai. All rights reserved. </div>
+
             </div>
         );
     }

@@ -9,6 +9,7 @@ import Course from "./Components/Course";
 import AuthPage from "./AuthPage";
 import Personal from "./Personal"
 import Signup from "./Signup"
+import CourseCalendar from "./CourseCalendar"
 import "./App.css";
 import { Route, Switch } from 'react-router-dom';
 
@@ -29,11 +30,8 @@ class App extends React.Component {
                     <Route exact path="/personal" component={Personal}></Route>
                     <Route exact path="/signup" component={Signup}></Route> */}
                     <Route exact path="/auth" component={AuthPage}></Route>
-
-                    {/*  <Route exact path="/calendar" component={Calendar}></Route>                   
+                    <Route exact path="/calendar" component={CourseCalendar}></Route> 
                     
-                    <Route exact path="/login" component={Login}></Route> */}
-
                 </Switch>
 
                 <Footer />
