@@ -14,7 +14,7 @@ class CourseCardList extends React.Component {
     });
 
     render() {
-        return <div>{this.renderList()}</div>;
+        return <div className="course-container">{this.renderList()}</div>;
     }
 }
 

@@ -40,7 +40,7 @@ const kategorijos = [
   { label: 'IT' },
   { label: 'APSKAITA' },
   { label: 'PARDAVIMAI' }
- 
+
 ].map(suggestion => ({
   value: suggestion.label,
   label: suggestion.label,
@@ -126,8 +126,8 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     overflow: 'hidden',
     //margin: 10 
-    padding:5 
-    
+    padding: 5
+
   },
   chip: {
     margin: theme.spacing(0.5, 0.25),
@@ -261,9 +261,9 @@ const components = {
 
 const components2 = {
   Control,
-  
+
 };
-export default function IntegrationReactSelect() {
+export default function IntegrationReactSelect(props) {
   const classes = useStyles();
   const [category, setCat] = React.useState(null);
   const [subcategory, setSubcat] = React.useState(null);
@@ -271,7 +271,7 @@ export default function IntegrationReactSelect() {
   const [price, setPrice] = React.useState(null);
   const [lector, setLector] = React.useState(null);
 
-  function handleChangeCategory(value) {  
+  function handleChangeCategory(value) {
     setCat(value);
   }
 
@@ -291,12 +291,17 @@ export default function IntegrationReactSelect() {
     setLector(value);
   }
 
+  function onFormSubmit(e) {
+    e.preventDefault();
+    props.history.push('/courses');
+  }
+
   return (
     <div className="filterDiv">
       <div className="detaliPaieska">
         DETALI PAIEŠKA</div>
       <div className={classes.divider} />
-      <form onSubmit="#">
+      <form onSubmit={onFormSubmit}>
         <p>Kategorijos</p>
         <Select
           placeholder="All"
@@ -331,12 +336,12 @@ export default function IntegrationReactSelect() {
 
         <p>Data nuo:</p>
         <DatePicker
-        selected={new Date()}
-        components={components2}
-        className="datos"
+          selected={new Date()}
+          components={components2}
+          className="datos"
 
-      />
-        
+        />
+
         <p>Kaina</p>
         <Select
           placeholder="Nuo"
@@ -359,28 +364,28 @@ export default function IntegrationReactSelect() {
         />
         <br></br>
         <label>
-        <input type="checkbox" value="value" />
-        Švietimo ir mokslo institucijos patvirtintas sertifikatas      
+          <input type="checkbox" value="value" />
+          Švietimo ir mokslo institucijos patvirtintas sertifikatas
           </label>
-          
+
         <br></br>
         <label>
           <input type="checkbox" value="value" />
           Populiarus kategorijoje
-          </label> 
+          </label>
         <br></br>
         <br></br>
 
         <input type="submit" value="Ieškoti" className="searchB" />
 
       </form>
-      
+
       {/*<p>Visi kursai (Kategorija, subkategorija, miestas)</p>
       {listItems }
       <p>Filtruoti kursai (Kategorija, subkategorija, miestas)</p>
-      {mapFiltered}*/} 
-      
+      {mapFiltered}*/}
+
       <br></br>
-      </div>
+    </div>
   );
 }
