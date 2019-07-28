@@ -10,12 +10,12 @@
 .searchas {
   width: 100%;
   height: 35px;
-  border: #9b9898 2px solid;
+  border: #9b9898 2px solid!important;
   margin-top: 30px;
 }
 .btn1 {
-  margin-left: 65px;
-  margin-top: 55px;
+  margin-left: 65px!important;
+  margin-top: 55px!important;
   width: 60%;
   height: 30px;
   background-color: #9b9898;

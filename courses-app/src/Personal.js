@@ -9,6 +9,7 @@ import Paper from '@material-ui/core/Paper';
 import CourseCardList from './Components/CourseCardList';
 import { allCourses } from './Components/fakeData';
 import Blog from './Blog';
+
 class Personal extends React.Component {
 
     render() {
@@ -19,6 +20,7 @@ class Personal extends React.Component {
                     <Grid item xs={2}>
                     </Grid>
                     <Grid item xs={8}>
+
                         <Paper> <img className="photo" src={"http://www.pixelprints.co.in/images/portfolio/graphic-design/logo/small/logo_3.png"} alt="" />Vardas Pavardė</Paper>
                     </Grid>
                 </Grid>

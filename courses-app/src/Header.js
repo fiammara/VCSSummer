@@ -7,10 +7,12 @@ import {
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 const styleSheet = {
   list: {
     width: 200,
+    
   },
   padding: {
     paddingRight: 30,
@@ -94,20 +96,20 @@ class Header extends Component {
 
   //Larger Screens
   destroyDrawer() {
-    const { classes } = this.props
+  //  const { classes } = this.props
     return (
 
-      <AppBar position="fixed">
+      <AppBar position="fixed" >
         <Toolbar>
-          <Typography variant = "headline" style={{flexGrow:1}} color="inherit" >{<Link to="/">LOGO</Link>}</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/filter" >Kategorijos </Link>}</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/calendar" >Kalendorius </Link>}</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/blog" >Blog'as </Link>}</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/personal" >Asmeninis profilis </Link>}</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" >{<Link to="/duk" >DUK </Link>}</Typography>
-          <Typography variant="subheading" className={classes.padding} color="inherit" >
+          <Typography variant = "headline" style={{flexGrow:1}} color="inherit" ><Link to="/">LOGO</Link></Typography>
+          <Button ><Link to="/filter" style={{ color: "white" }} >Kategorijos </Link></Button>
+          <Button ><Link to="/calendar"  style={{ color: "white" }}  >Kalendorius </Link></Button>
+          <Button ><Link to="/blog"  style={{ color: "white" }}  >Blog'as </Link></Button>
+          <Button ><Link to="/personal"  style={{ color: "white" }}  >Asmeninis profilis </Link></Button>
+          <Button ><Link to="/duk"   style={{ color: "white" }} >DUK </Link></Button>
+          <Button >
             <Link to="/auth" style={{ color: "white" }}>Prisijungimas</Link>
-          </Typography>
+          </Button>
         </Toolbar>
       </AppBar>
 
