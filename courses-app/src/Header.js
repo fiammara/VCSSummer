@@ -77,7 +77,7 @@ class Header extends Component {
             onKeyDown={() => { this.setState({ drawer: false }) }}>
 
             <List className={this.props.classes.list}>
-             <ListItem key = {1} button divider>{<Link to="/filter" > Kategorijos </Link>}</ListItem>
+             <ListItem key = {1} button divider>{<Link to="/filter" > Detali paieška </Link>}</ListItem>
                <ListItem key = {2} button divider>{<Link to="/calendar"> Kalendorius </Link>}</ListItem>
                <ListItem key = {3} button divider>{<Link to="/blog"> Blog'as</Link>}</ListItem>
                <ListItem key = {1} button divider>{<Link to="/personal"> Asmeninis profilis</Link>}</ListItem>
@@ -102,7 +102,7 @@ class Header extends Component {
       <AppBar position="fixed" >
         <Toolbar>
           <Typography variant = "headline" style={{flexGrow:1}} color="inherit" ><Link to="/">LOGO</Link></Typography>
-          <Button ><Link to="/filter" style={{ color: "white" }} >Kategorijos </Link></Button>
+          <Button ><Link to="/filter" style={{ color: "white" }} >Detali paieška </Link></Button>
           <Button ><Link to="/calendar"  style={{ color: "white" }}  >Kalendorius </Link></Button>
           <Button ><Link to="/blog"  style={{ color: "white" }}  >Blog'as </Link></Button>
           <Button ><Link to="/personal"  style={{ color: "white" }}  >Asmeninis profilis </Link></Button>
