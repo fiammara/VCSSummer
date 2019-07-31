@@ -1,6 +1,6 @@
 import React from "react";
 import Calendar from 'react-calendar';
-
+import ACourseList from "./ACourseList";
 class CourseCalendar extends React.Component {
     state = {
       date: new Date(),
@@ -10,6 +10,7 @@ class CourseCalendar extends React.Component {
         return (
           <div className="calendarContainer">
             <Calendar value={this.state.date}/>
+           < ACourseList/>
           </div>
         );
       }

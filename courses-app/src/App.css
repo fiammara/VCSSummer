@@ -118,6 +118,12 @@
   padding-left: 30px;
 }
 
+.addModal {width: 50%;
+height:50%;
+background-color: blueviolet;
+padding-top:50px;
+}
+
   /* PERSONAL starts------------*/
 
 .personalPage {
