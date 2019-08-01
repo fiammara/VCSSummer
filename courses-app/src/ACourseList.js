@@ -14,9 +14,9 @@ class ACourseList extends Component {
                 id: '',
                 name: ''
             }],
-            newItem: {
-                name: ''
-            },
+            /*  newItem: {
+                  name: ''
+              },*/
         };
 
     }
@@ -52,18 +52,18 @@ class ACourseList extends Component {
             this.getData()
         );
     }
-    
+
     render() {
-        
+
         return (
-            <div className="todoList">
+            <div className="coursesList">
 
                 <Modal className="addModal" isOpen={this.state.addModal} onRequestClose={this.closeAddModal}>
-                   <CourseAddComponent cancel={this.closeAddModal} add={this.handleOnAddItem} />
+                    <CourseAddComponent cancel={this.closeAddModal} add={this.handleOnAddItem} />
                 </Modal>
 
                 <p>Courses list:</p>
-                <table className="table">
+                <table >
                     <tbody>
                         {this.state.courses.map((course, index) => {
                             return <ACourse key={course.id} arrayId={index} data={course} />
@@ -71,7 +71,7 @@ class ACourseList extends Component {
                     </tbody>
                 </table>
                 <br />
-                <button onClick={this.openAddModal} className="addButton">Add new course</button>
+                <button onClick={this.openAddModal} >Add new course</button>
             </div>
         );
     }
