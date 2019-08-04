@@ -7,7 +7,9 @@ import {
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
+//import Button from '@material-ui/core/Button';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
 const styleSheet = {
   list: {
@@ -24,6 +26,10 @@ const styleSheet = {
     color: "white",
     cursor: "pointer",
   },
+  bigIndicator: {
+    height: 3,
+    backgroundColor: "white"
+  },
 }
 class Header extends Component {
   constructor(props) {
@@ -32,6 +38,10 @@ class Header extends Component {
     this.createDrawer = this.createDrawer.bind(this);
     this.destroyDrawer = this.destroyDrawer.bind(this);
   }
+  
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
 
   componentWillMount() {
     if (window.innerWidth <= 600) {
@@ -96,21 +106,21 @@ class Header extends Component {
 
   //Larger Screens
   destroyDrawer() {
-  //  const { classes } = this.props
+    const { classes } = this.props
+    const {value} = this.state
     return (
 
-      <AppBar position="fixed" >
-        <Toolbar>
+      <AppBar position="fixed" color="primary" >
+        <Tabs classes={{ indicator: classes.bigIndicator }} value={value}
+          onChange={this.handleChange} >
           <Typography variant = "headline" style={{flexGrow:1}} color="inherit" ><Link to="/">LOGO</Link></Typography>
-          <Button ><Link to="/filter" style={{ color: "white" }} >Detali paieška </Link></Button>
-          <Button ><Link to="/calendar"  style={{ color: "white" }}  >Kalendorius </Link></Button>
-          <Button ><Link to="/blog"  style={{ color: "white" }}  >Blog'as </Link></Button>
-          <Button ><Link to="/personal"  style={{ color: "white" }}  >Asmeninis profilis </Link></Button>
-          <Button ><Link to="/duk"   style={{ color: "white" }} >DUK </Link></Button>
-          <Button >
-            <Link to="/auth" style={{ color: "white" }}>Prisijungimas</Link>
-          </Button>
-        </Toolbar>
+          <Tab label="Detali paieška" component={Link} to={"/filter"}  />
+          <Tab label="Kalendorius" component={Link} to={"/calendar"}  />
+          <Tab label="Blog'as" component={Link} to={"/blog"}  />
+          <Tab label="Asmeninis profilis" component={Link} to={"/personal"}  />
+          <Tab label="Duk" component={Link} to={"/duk"}  />
+          <Tab label="Prisijungimas" component={Link} to={"/auth"}  />
+        </Tabs>
       </AppBar>
 
     )
