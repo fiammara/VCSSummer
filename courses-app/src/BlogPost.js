@@ -15,7 +15,7 @@ const BlogPost = props => {
 
             < div className="blog2" >
                 <div className="blogTitle">
-                    <h3 className="blogTitleH">{props.data.blogTitle}</h3>
+                    <h3 className="blogTitleH">{props.data.blogTitleH}</h3>
                 </div>
                 <div className="blogAuthorImg">
                     {props.data.blogAuthorImg}

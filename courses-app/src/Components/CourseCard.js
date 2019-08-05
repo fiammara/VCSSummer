@@ -55,38 +55,38 @@ class CourseCard extends React.Component {
             return null;
         }
     }
-
+    
     render() {
         return (
             <div className="course-card" data-id={this.props.id}>
                 <i className="far fa-bookmark course-card-bookmark"></i>
                 <div className="course-card-top">
                     <div className="course-card-logo">
-                        <img className="logo-image" src={this.state.course.logo} alt="courses logo" />
+                        <img className="logo-image" src={this.props.course.logo} alt="courses logo" />
                     </div>
-                    <div className="course-card-title">{this.state.course.title}</div>
+                    <div className="course-card-title">{this.props.course.title}</div>
                 </div>
                 <div className="course-card-bottom">
                     <div className="course-card-bottom-left">
                         <span className="course-card-place">
                             <i className="fas fa-map-marker-alt"></i>
-                            {this.state.course.location}
+                            {this.props.course.location}
                         </span>
                         <span className="course-card-duration">
                             <i className="fas fa-history"></i>
-                            {this.state.course.duration} d.
+                            {this.props.course.duration} d.
                             </span>
                         <span className="course-card-date">
                             <i className="far fa-calendar-alt"></i>
-                            {this.state.course.date}
+                            {this.props.course.date}
                         </span>
                     </div>
                     <div className="course-card-bottom-right">
                         <div className="course-card-rating">
-                            {this.renderRating(this.state.course.countRating())}
-                            <span className="course-card-rating-total">{this.state.course.reviews.length}</span>
+                            {this.renderRating(this.props.course.rating)} 
+                          { /*  <span className="course-card-rating-total">{this.state.course.reviews.length}</span> */}
                         </div>
-                        <h2 className="course-card-price">&euro; {this.state.course.price} </h2>
+                        <h2 className="course-card-price">&euro; {this.props.course.price} </h2>
                     </div>
                 </div>
                 {this.renderArrowButton()}
@@ -97,4 +97,3 @@ class CourseCard extends React.Component {
 }
 
 export default CourseCard;
-
