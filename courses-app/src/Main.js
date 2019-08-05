@@ -26,7 +26,7 @@ class Main extends React.Component {
                                     <h2>Lorem ipsum dolor sit<span> amet, consetetur </span>sadipscing elitr, sed diam nonumy eirmod tempor?</h2>
 
                                     <OutlinedInput fullWidth type="text" placeholder="Search.." name="search" ></OutlinedInput>
-                                    <Link to='/courses' style={{textDecoration: 'none'}}>
+                                    <Link to='/courses' style={{ textDecoration: 'none' }}>
                                         <Button className="btn1" variant="contained" color="default">Ieškoti</Button>
                                     </Link>
 
@@ -37,7 +37,6 @@ class Main extends React.Component {
                             </div>
                         </div>
                     </Grid>
-
                 </Grid>
 
             </div>
