@@ -8,7 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import CourseCardList from './Components/CourseCardList';
 import { allCourses } from './Components/fakeData';
-import BlogPost from './BlogPost';
+import Blog from './Blog';
 
 class Personal extends React.Component {
 
@@ -97,7 +97,7 @@ class Personal extends React.Component {
                             </ExpansionPanelSummary>
 
                             <ExpansionPanelDetails>
-                            <BlogPost />
+                            <Blog />
                             </ExpansionPanelDetails>
                         </ExpansionPanel></Paper>
                     </Grid>

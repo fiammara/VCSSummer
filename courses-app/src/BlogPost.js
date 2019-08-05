@@ -2,40 +2,38 @@ import React from "react";
 import "./Main.css";
 import "./Blog.css";
 
-const BlogPost = () => {
+const BlogPost = props => {
     return (
 
         <div className="blogPost" >
-            
+
             < div className="blog1" >
                 <div className="blogImg">
-                    <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlyqcEbtZy1vItK_jDT9iA-wqLmkj7nb8iYipzXcbMhAaovjhLOQ"} alt="" />
+                    {props.data.blogImg}
                 </div>
             </div >
-            
+
             < div className="blog2" >
                 <div className="blogTitle">
-                    <h3 className="blogTitleH">Sed Ut perspiciatis Unde Omnis
-                                    Iste Natus Error Sit Voluplatem</h3>
+                    <h3 className="blogTitleH">{props.data.blogTitle}</h3>
                 </div>
                 <div className="blogAuthorImg">
-                    <img src={"http://www.pixelprints.co.in/images/portfolio/graphic-design/logo/small/logo_3.png"} alt="" />
+                    {props.data.blogAuthorImg}
 
                 </div>
                 <div className="blogAuthor">
-                    <h3>Rob Robinson</h3>
-                    <h3>Title</h3>
+                    <h3>{props.data.blogAuthor}</h3>
+                    <h3>{props.data.title}</h3>
                 </div>
                 <div className="blogDate">
-                    <h3>2019.5.25</h3>
+                    <h3>{props.data.blogDate}</h3>
                 </div>
             </div >
-        
+
             < div className="blog3" >
                 <div className="blogTextwBtn">
-                    <p>It is a long established fact that a reader will be distracted by the readable content
-                        of a page when looking at its layout. The point of
-                                </p>
+                    <p>{props.data.blogTextwBtn}
+                    </p>
                     <button>Skaityti</button>
                 </div>
             </div >
