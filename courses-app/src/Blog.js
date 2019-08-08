@@ -15,7 +15,7 @@ class Blog extends Component {
                     id: 0,
                     blogImg: <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlyqcEbtZy1vItK_jDT9iA-wqLmkj7nb8iYipzXcbMhAaovjhLOQ"} alt="" />,
                     blogTitle: 'Sed Ut perspiciatis Unde Omnis Iste Natus Error Sit Voluplatem',
-                    blogAuthorImg: <img src={"http://www.pixelprints.co.in/images/portfolio/graphic-design/logo/small/logo_3.png"} alt=""/>,
+                    blogAuthorImg: <img src={"http://www.pixelprints.co.in/images/portfolio/graphic-design/logo/small/logo_3.png"} alt="" />,
                     blogAuthor: 'Rob Robinson1',
                     title: 'Title',
                     blogDate: '2019.5.25',
@@ -26,7 +26,7 @@ class Blog extends Component {
                     id: 1,
                     blogImg: <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlyqcEbtZy1vItK_jDT9iA-wqLmkj7nb8iYipzXcbMhAaovjhLOQ"} alt="" />,
                     blogTitle: 'Sed Ut perspiciatis Unde Omnis Iste Natus Error Sit Voluplatem',
-                    blogAuthorImg: <img src={"http://www.pixelprints.co.in/images/portfolio/graphic-design/logo/small/logo_3.png"} alt=""/>,
+                    blogAuthorImg: <img src={"http://www.pixelprints.co.in/images/portfolio/graphic-design/logo/small/logo_3.png"} alt="" />,
                     blogAuthor: 'Rob Robinson2',
                     title: 'Title',
                     blogDate: '2019.5.26',
@@ -59,11 +59,10 @@ class Blog extends Component {
                     <div className="textBlock">
                         <h3 className="intro1">pasirinkti pagal kategorijas</h3>
                         <input className="search1" type="text" name="fname" placeholder="  Visos"></input>
-                        <div>
-                            {this.state.blogData.map((blogData, index) => {
-                                return <BlogPost key={blogData.id} arrayId={index} data={blogData} />
-                            })}
-                        </div>
+
+                        {this.state.blogData.map((blogData, index) => {
+                            return <BlogPost key={blogData.id} arrayId={index} data={blogData} />
+                        })}
                     </div>
                 </div>
             </div>
