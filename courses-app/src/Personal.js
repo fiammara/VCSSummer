@@ -38,7 +38,7 @@ class Personal extends React.Component {
                             </ExpansionPanelSummary>
 
                             <ExpansionPanelDetails>
-                            <CourseCardList courses={allCourses} />
+                                <CourseCardList courses={allCourses} />
                             </ExpansionPanelDetails>
                         </ExpansionPanel></Paper>
                     </Grid>
@@ -57,7 +57,7 @@ class Personal extends React.Component {
                             </ExpansionPanelSummary>
 
                             <ExpansionPanelDetails>
-                            <CourseCardList courses={allCourses} />
+                                <CourseCardList courses={allCourses} />
                             </ExpansionPanelDetails>
                         </ExpansionPanel></Paper>
                     </Grid>
@@ -83,7 +83,7 @@ class Personal extends React.Component {
                         </ExpansionPanel></Paper>
                     </Grid>
                 </Grid>
-                
+
                 <Grid container spacing={3}>
                     <Grid item xs={2}>
                     </Grid>
@@ -97,7 +97,7 @@ class Personal extends React.Component {
                             </ExpansionPanelSummary>
 
                             <ExpansionPanelDetails>
-                            <Blog />
+                                <Blog />
                             </ExpansionPanelDetails>
                         </ExpansionPanel></Paper>
                     </Grid>
