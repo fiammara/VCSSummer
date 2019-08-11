@@ -1,6 +1,6 @@
 import React from 'react';
-import CourseCard from './CourseCard';
 import faker from 'faker';
+import CourseCard from './CourseCard';
 
 class CourseCardList extends React.Component {
     constructor(props) {
@@ -14,8 +14,8 @@ class CourseCardList extends React.Component {
                     title: faker.commerce.productName(),
                     logo: faker.image.image(),
                     location: faker.address.city(),
-                    duration: "1",
-                    date: "2019-12-01",
+                    duration: '1',
+                    date: '2019-12-01',
                     price: faker.random.number({ min: 99, max: 999 }),
                     rating: 5
                 },
@@ -24,8 +24,8 @@ class CourseCardList extends React.Component {
                     title: faker.commerce.productName(),
                     logo: faker.image.image(),
                     location: faker.address.city(),
-                    duration: "12",
-                    date: "2019-12-01",
+                    duration: '12',
+                    date: '2019-12-01',
                     price: faker.random.number({ min: 99, max: 999 }),
                     rating: 4
                 },
@@ -34,8 +34,8 @@ class CourseCardList extends React.Component {
                     title: faker.commerce.productName(),
                     logo: faker.image.image(),
                     location: faker.address.city(),
-                    duration: "20",
-                    date: "2019-12-01",
+                    duration: '20',
+                    date: '2019-12-01',
                     price: faker.random.number({ min: 99, max: 999 }),
                     rating: 3
                 },
@@ -44,8 +44,8 @@ class CourseCardList extends React.Component {
                     title: faker.commerce.productName(),
                     logo: faker.image.image(),
                     location: faker.address.city(),
-                    duration: "30",
-                    date: "2019-12-01",
+                    duration: '30',
+                    date: '2019-12-01',
                     price: faker.random.number({ min: 99, max: 999 }),
                     rating: 5
                 },
@@ -53,11 +53,13 @@ class CourseCardList extends React.Component {
             ]
         };
     }
+
     state = { selectedCourse: {} };
 
     componentDidMount() {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
     }
+
     onArrowClick = (course) => {
         this.setState({ selectedCourse: course });
     }

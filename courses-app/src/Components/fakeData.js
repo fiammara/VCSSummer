@@ -26,7 +26,6 @@ class Course {
     }
 };
 
-
 class Certificate {
     constructor(title, about, link, logo) {
         this.title = title;
@@ -94,7 +93,7 @@ for (let i = 0; i < 10; i++) {
         const ymd = `${date.getFullYear()}-${date.getMonth() + 1 < 10 ? '0' + date.getMonth() : date.getMonth()}-${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()}`;
         const review = faker.lorem.sentence();
         allCourses[i].reviews.push(new Review(j, rating, user, ymd, review));
-    };
+    }
     allCourses.forEach(el => {
         const firstName = faker.name.firstName();
         const lastName = faker.name.lastName();
@@ -123,12 +122,6 @@ for (let i = 0; i < 10; i++) {
         el.certificates.push(new Certificate(title, about, link, logo));
     });
 
-};
+}
 
 export { allCourses };
-
-
-
-
-
-

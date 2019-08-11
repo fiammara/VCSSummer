@@ -9,9 +9,9 @@ import ReviewCard from './ReviewCard';
 import { allCourses } from './fakeData';
 
 class CourseInfo extends React.Component {
-    state = { tab: "program" };
+    state = { tab: 'program' };
 
-    activateTab = event => {
+    activateTab = (event) => {
         const activeCard = event.currentTarget.parentNode.parentNode.parentNode;
         const tab = event.currentTarget.getAttribute('data-tab');
         activeCard.querySelector('.tab-active').classList.remove('tab-active');
@@ -21,46 +21,46 @@ class CourseInfo extends React.Component {
 
     renderNavigation() {
         return (
-            <div className="card-info-tabs">
-                <div className="card-info-tabs-tab tab-active" data-tab="program" onClick={this.activateTab}>
+          <div className="card-info-tabs">
+            <div className="card-info-tabs-tab tab-active" data-tab="program" onClick={this.activateTab}>
                     PROGRAMA
-                </div>
-                <div className="card-info-tabs-tab" data-tab="lector" onClick={this.activateTab}>
+            </div>
+            <div className="card-info-tabs-tab" data-tab="lector" onClick={this.activateTab}>
                     LEKTORIUS
-                </div>
-                <div className="card-info-tabs-tab" data-tab="calendar" onClick={this.activateTab}>
+            </div>
+            <div className="card-info-tabs-tab" data-tab="calendar" onClick={this.activateTab}>
                     KALENDORIUS
-                </div>
-                <div className="card-info-tabs-tab" data-tab="certificate" onClick={this.activateTab}>
+            </div>
+            <div className="card-info-tabs-tab" data-tab="certificate" onClick={this.activateTab}>
                     SERTIFIKATAS
-                </div>
-                <div className="card-info-tabs-tab" data-tab="reviews" onClick={this.activateTab}>
+            </div>
+            <div className="card-info-tabs-tab" data-tab="reviews" onClick={this.activateTab}>
                     ATSILIEPIMAI
-                </div>
-                <div className="card-info-tabs-tab" data-tab="contacts" onClick={this.activateTab}>
+            </div>
+            <div className="card-info-tabs-tab" data-tab="contacts" onClick={this.activateTab}>
                     KONTAKTAI
-                </div>
-            </div >
+            </div>
+          </div>
         );
     }
 
     renderTab = () => {
-        let tab = "";
+        let tab = '';
 
         switch (this.state.tab) {
-            case "certificate":
+            case 'certificate':
                 tab = <CertificateCard course={this.props.course} />;
                 break;
-            case "contacts":
+            case 'contacts':
                 tab = <ContactsCard course={this.props.course} />;
                 break;
-            case "calendar":
+            case 'calendar':
                 tab = <CalendarCard courses={allCourses} handleSelectedCourse={this.handleSelectedCourse} />;
                 break;
-            case "lector":
+            case 'lector':
                 tab = <LectorCard course={this.props.course} />;
                 break;
-            case "reviews":
+            case 'reviews':
                 tab = <ReviewCard course={this.props.course} />;
                 break;
             default:
@@ -72,22 +72,22 @@ class CourseInfo extends React.Component {
 
     renderRegistration() {
         return (
-            <div className="course-card-registration">
-                <span>REGISTRACIJA </span>
-                <Link to='/'>  Random registration link</Link>
-            </div>
+          <div className="course-card-registration">
+            <span>REGISTRACIJA </span>
+            <Link to='/'>  Random registration link</Link>
+          </div>
         );
     }
 
     render() {
         return (
-            <div className="course-info">
-                {this.renderNavigation()}
-                {this.renderTab()}
-                {this.renderRegistration()}
-            </div>
+          <div className="course-info">
+            {this.renderNavigation()}
+            {this.renderTab()}
+            {this.renderRegistration()}
+          </div>
         );
     }
-};
+}
 
 export default CourseInfo;

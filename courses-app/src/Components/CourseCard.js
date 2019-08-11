@@ -23,9 +23,9 @@ class CourseCard extends React.Component {
         let finalRating = [];
         for (let i = 0; i < 5; i++) {
             if (i < rating) {
-                finalRating.push(<i className="fas fa-star"></i>);
+                finalRating.push(<i className="fas fa-star" />);
             } else {
-                finalRating.push(<i className="far fa-star"></i>);
+                finalRating.push(<i className="far fa-star" />);
             }
         }
         return finalRating;
@@ -47,10 +47,10 @@ class CourseCard extends React.Component {
                 className = 'course-card-arrow pointing-bottom';
             }
             return (
-                <div className="course-card-arrow-more">
-                    <div className={className} onClick={() => this.onArrowClick()}></div>
-                </div>
-            )
+              <div className="course-card-arrow-more">
+                <div className={className} onClick={() => this.onArrowClick()} />
+              </div>
+            );
         } else {
             return null;
         }
@@ -58,41 +58,42 @@ class CourseCard extends React.Component {
     
     render() {
         return (
-            <div className="course-card" data-id={this.props.id}>
-                <i className="far fa-bookmark course-card-bookmark"></i>
-                <div className="course-card-top">
-                    <div className="course-card-logo">
-                        <img className="logo-image" src={this.props.course.logo} alt="courses logo" />
-                    </div>
-                    <div className="course-card-title">{this.props.course.title}</div>
-                </div>
-                <div className="course-card-bottom">
-                    <div className="course-card-bottom-left">
-                        <span className="course-card-place">
-                            <i className="fas fa-map-marker-alt"></i>
-                            {this.props.course.location}
-                        </span>
-                        <span className="course-card-duration">
-                            <i className="fas fa-history"></i>
-                            {this.props.course.duration} d.
-                            </span>
-                        <span className="course-card-date">
-                            <i className="far fa-calendar-alt"></i>
-                            {this.props.course.date}
-                        </span>
-                    </div>
-                    <div className="course-card-bottom-right">
-                        <div className="course-card-rating">
-                            {this.renderRating(this.props.course.rating)} 
-                          { /*  <span className="course-card-rating-total">{this.state.course.reviews.length}</span> */}
-                        </div>
-                        <h2 className="course-card-price">&euro; {this.props.course.price} </h2>
-                    </div>
-                </div>
-                {this.renderArrowButton()}
-                {this.renderCourseCardInfo()}
+          <div className="course-card" data-id={this.props.id}>
+            <i className="far fa-bookmark course-card-bookmark" />
+            <div className="course-card-top">
+              <div className="course-card-logo">
+                <img className="logo-image" src={this.props.course.logo} alt="courses logo" />
+              </div>
+              <div className="course-card-title">{this.props.course.title}</div>
             </div>
-        )
+            <div className="course-card-bottom">
+              <div className="course-card-bottom-left">
+                <span className="course-card-place">
+                  <i className="fas fa-map-marker-alt" />
+                  {this.props.course.location}
+                </span>
+                <span className="course-card-duration">
+                  <i className="fas fa-history" />
+                  {this.props.course.duration} 
+                  d.
+                </span>
+                <span className="course-card-date">
+                  <i className="far fa-calendar-alt" />
+                  {this.props.course.date}
+                </span>
+              </div>
+              <div className="course-card-bottom-right">
+                <div className="course-card-rating">
+                  {this.renderRating(this.props.course.rating)} 
+                  { /*  <span className="course-card-rating-total">{this.state.course.reviews.length}</span> */}
+                </div>
+                <h2 className="course-card-price">&euro; {this.props.course.price} </h2>
+              </div>
+            </div>
+            {this.renderArrowButton()}
+            {this.renderCourseCardInfo()}
+          </div>
+        );
     }
 }
 

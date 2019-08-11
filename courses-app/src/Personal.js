@@ -10,124 +10,135 @@ import CourseCardList from './Components/CourseCardList';
 import { allCourses } from './Components/fakeData';
 import Blog from './Blog';
 
-class Personal extends React.Component {
+const Personal = () => 
+(
+  <div className="personalPage">
+    <Grid container spacing={3}>
+      <Grid item xs={2} />
+      <Grid item xs={8}>
 
-    render() {
+        <Paper> 
+          <img className="photo" src="http://www.pixelprints.co.in/images/portfolio/graphic-design/logo/small/logo_3.png" alt="" />
+          Vardas Pavardė
+        </Paper>
+      </Grid>
+    </Grid>
 
-        return (
-            <div className="personalPage">
-                <Grid container spacing={3}>
-                    <Grid item xs={2}>
-                    </Grid>
-                    <Grid item xs={8}>
+    <Grid container spacing={3}>
+      <Grid item xs={2} />
+      <Grid item xs={8}>
+        <Paper> 
+          {' '}
+          <ExpansionPanel>
 
-                        <Paper> <img className="photo" src={"http://www.pixelprints.co.in/images/portfolio/graphic-design/logo/small/logo_3.png"} alt="" />Vardas Pavardė</Paper>
-                    </Grid>
-                </Grid>
+            <ExpansionPanelSummary 
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header2"
+            >
+              <Typography>Mano lankyti kursai</Typography>
+            </ExpansionPanelSummary>
 
-                <Grid container spacing={3}>
-                    <Grid item xs={2}>
-                    </Grid>
-                    <Grid item xs={8}>
-                        <Paper> <ExpansionPanel>
-                            <ExpansionPanelSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel2a-content"
-                                id="panel2a-header2" >
-                                <Typography >Mano lankyti kursai</Typography>
-                            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <CourseCardList courses={allCourses} />
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        </Paper>
+      </Grid>
+    </Grid>
 
-                            <ExpansionPanelDetails>
-                                <CourseCardList courses={allCourses} />
-                            </ExpansionPanelDetails>
-                        </ExpansionPanel></Paper>
-                    </Grid>
-                </Grid>
+    <Grid container spacing={3}>
+      <Grid item xs={2} />
+      <Grid item xs={8}>
+        <Paper> 
+          {' '}
+          <ExpansionPanel>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header2"
+            >
+              <Typography>Mano pamėgti kursai</Typography>
+            </ExpansionPanelSummary>
 
-                <Grid container spacing={3}>
-                    <Grid item xs={2}>
-                    </Grid>
-                    <Grid item xs={8}>
-                        <Paper> <ExpansionPanel>
-                            <ExpansionPanelSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel2a-content"
-                                id="panel2a-header2" >
-                                <Typography >Mano pamėgti kursai</Typography>
-                            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <CourseCardList courses={allCourses} />
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        </Paper>
+      </Grid>
+    </Grid>
+    <Grid container spacing={3}>
+      <Grid item xs={2} />
+      <Grid item xs={8}>
+        <Paper> 
+          <ExpansionPanel>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header2"
+            >
+              <Typography>Mano pamėgti lektoriai</Typography>
+            </ExpansionPanelSummary>
 
-                            <ExpansionPanelDetails>
-                                <CourseCardList courses={allCourses} />
-                            </ExpansionPanelDetails>
-                        </ExpansionPanel></Paper>
-                    </Grid>
-                </Grid>
-                <Grid container spacing={3}>
-                    <Grid item xs={2}>
-                    </Grid>
-                    <Grid item xs={8}>
-                        <Paper> <ExpansionPanel>
-                            <ExpansionPanelSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel2a-content"
-                                id="panel2a-header2" >
-                                <Typography >Mano pamėgti lektoriai</Typography>
-                            </ExpansionPanelSummary>
-
-                            <ExpansionPanelDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+            <ExpansionPanelDetails>
+              <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
                                     sit amet blandit leo lobortis eget.
-                         </Typography>
-                            </ExpansionPanelDetails>
-                        </ExpansionPanel></Paper>
-                    </Grid>
-                </Grid>
+              </Typography>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        </Paper>
+      </Grid>
+    </Grid>
 
-                <Grid container spacing={3}>
-                    <Grid item xs={2}>
-                    </Grid>
-                    <Grid item xs={8}>
-                        <Paper> <ExpansionPanel>
-                            <ExpansionPanelSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel2a-content"
-                                id="panel2a-header2" >
-                                <Typography >Mano pamėgti blogo įrašai</Typography>
-                            </ExpansionPanelSummary>
+    <Grid container spacing={3}>
+      <Grid item xs={2} />
+      <Grid item xs={8}>
+        <Paper> 
+          <ExpansionPanel>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header2"
+            >
+              <Typography>Mano pamėgti blogo įrašai</Typography>
+            </ExpansionPanelSummary>
 
-                            <ExpansionPanelDetails>
-                                <Blog />
-                            </ExpansionPanelDetails>
-                        </ExpansionPanel></Paper>
-                    </Grid>
-                </Grid>
+            <ExpansionPanelDetails>
+              <Blog />
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        </Paper>
+      </Grid>
+    </Grid>
 
-                <Grid container spacing={3}>
-                    <Grid item xs={2}>
-                    </Grid>
-                    <Grid item xs={8}>
-                        <Paper> <ExpansionPanel>
-                            <ExpansionPanelSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel2a-content"
-                                id="panel2a-header2" >
-                                <Typography >Tvarkyti asmeninius duomenis</Typography>
-                            </ExpansionPanelSummary>
+    <Grid container spacing={3}>
+      <Grid item xs={2} />
+      <Grid item xs={8}>
+        <Paper> 
+          <ExpansionPanel>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header2"
+            >
+              <Typography>Tvarkyti asmeninius duomenis</Typography>
+            </ExpansionPanelSummary>
 
-                            <ExpansionPanelDetails>
-                                <Typography>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                    sit amet blandit leo lobortis eget.
-                         </Typography>
-                            </ExpansionPanelDetails>
-                        </ExpansionPanel></Paper>
-                    </Grid>
-                </Grid>
-                <br />
+            <ExpansionPanelDetails>
+              <Typography>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse 
+             malesuada lacus ex, sit amet blandit leo lobortis eget.
+              </Typography>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        </Paper>
+      </Grid>
+    </Grid>
+    <br />
 
-            </div>)
-    }
-}
-
+  </div>
+  );
+    
 export default Personal;

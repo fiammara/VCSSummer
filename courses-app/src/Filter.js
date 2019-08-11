@@ -7,11 +7,11 @@ import Chip from '@material-ui/core/Chip';
 import MenuItem from '@material-ui/core/MenuItem';
 import CancelIcon from '@material-ui/icons/Cancel';
 import PropTypes from 'prop-types';
-import "./App.css";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import './App.css';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
-/*const theData = [
+/* const theData = [
   {
       cat: 'PirmaKat',
       subcat: 'PirmaSubkat',
@@ -31,9 +31,9 @@ import "react-datepicker/dist/react-datepicker.css";
   }
 ]
 */
-//const listItems = theData.map((d) => <li key={d.cat}>{d.cat+ " "}{d.subcat+ " "}{d.city_C}</li>);
-//const filterFirstCat = theData.filter(cat => cat.cat === 'AntraKat');
-//const mapFiltered = filterFirstCat.map((d) => <li key={d.cat}>{d.cat+ " "}{d.subcat+ " "}{d.city_C}</li>);
+// const listItems = theData.map((d) => <li key={d.cat}>{d.cat+ " "}{d.subcat+ " "}{d.city_C}</li>);
+// const filterFirstCat = theData.filter(cat => cat.cat === 'AntraKat');
+// const mapFiltered = filterFirstCat.map((d) => <li key={d.cat}>{d.cat+ " "}{d.subcat+ " "}{d.city_C}</li>);
 const kategorijos = [
 
   { label: 'GROŽIS' },
@@ -115,8 +115,8 @@ const useStyles = makeStyles(theme => ({
   },
 
   notchedOutline: {
-    borderWidth: "1px",
-    borderColor: "gray !important"
+    borderWidth: '1px',
+    borderColor: 'gray !important'
 
   },
   valueContainer: {
@@ -125,7 +125,7 @@ const useStyles = makeStyles(theme => ({
     flex: 1,
     alignItems: 'center',
     overflow: 'hidden',
-    //margin: 10 
+    // margin: 10 
     padding: 5
 
   },
@@ -299,7 +299,8 @@ export default function IntegrationReactSelect(props) {
   return (
     <div className="filterDiv">
       <div className="detaliPaieska">
-        DETALI PAIEŠKA</div>
+        DETALI PAIEŠKA
+      </div>
       <div className={classes.divider} />
       <form onSubmit={onFormSubmit}>
         <p>Kategorijos</p>
@@ -362,30 +363,30 @@ export default function IntegrationReactSelect(props) {
           onChange={handleChangeLector}
           isMulti
         />
-        <br></br>
+        <br />
         <label>
           <input type="checkbox" value="value" />
           Švietimo ir mokslo institucijos patvirtintas sertifikatas
           </label>
 
-        <br></br>
+        <br />
         <label>
           <input type="checkbox" value="value" />
           Populiarus kategorijoje
           </label>
-        <br></br>
-        <br></br>
+        <br />
+        <br />
 
         <input type="submit" value="Ieškoti" className="searchB" />
 
       </form>
 
-      {/*<p>Visi kursai (Kategorija, subkategorija, miestas)</p>
+      {/* <p>Visi kursai (Kategorija, subkategorija, miestas)</p>
       {listItems }
       <p>Filtruoti kursai (Kategorija, subkategorija, miestas)</p>
-      {mapFiltered}*/}
+      {mapFiltered} */}
 
-      <br></br>
+      <br />
     </div>
   );
 }

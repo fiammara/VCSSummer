@@ -11,7 +11,7 @@ class Login extends Component {
     return (
       <div className="flex wrap mar1 auth">
         <div>Prisijunkite prie savo paskyros!</div>
-        <div className="flex input flex-center-Y marY1" style={{ backgroundColor: "#164675", color: "white" }}>
+        <div className="flex input flex-center-Y marY1" style={{ backgroundColor: '#164675', color: 'white' }}>
           <img
             src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-512.png"
             alt="Facebook"

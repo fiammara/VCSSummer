@@ -3,14 +3,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   AppBar, Toolbar, Typography, List, ListItem,
-  withStyles, Grid, SwipeableDrawer
+  withStyles, Grid, SwipeableDrawer, Tabs, Tab
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import SearchIcon from "@material-ui/icons/Search";
-import IconButton from "@material-ui/core/IconButton";
+import SearchIcon from '@material-ui/icons/Search';
+import IconButton from '@material-ui/core/IconButton';
 
 const styleSheet = {
   list: {
@@ -19,19 +17,20 @@ const styleSheet = {
   },
   padding: {
     paddingRight: 30,
-    cursor: "pointer",
+    cursor: 'pointer',
   },
 
   sideBarIcon: {
     padding: 0,
-    color: "white",
-    cursor: "pointer",
+    color: 'white',
+    cursor: 'pointer',
   },
   bigIndicator: {
     height: 3,
-    backgroundColor: "white"
+    backgroundColor: 'white'
   },
-}
+};
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -39,10 +38,6 @@ class Header extends Component {
     this.createDrawer = this.createDrawer.bind(this);
     this.destroyDrawer = this.destroyDrawer.bind(this);
   }
-
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
 
   componentWillMount() {
     if (window.innerWidth <= 800) {
@@ -52,41 +47,48 @@ class Header extends Component {
     window.addEventListener('resize', () => {
       if (window.innerWidth <= 800) {
         this.setState({ drawerActivate: true });
-      }
-      else {
-        this.setState({ drawerActivate: false })
+      } else {
+        this.setState({ drawerActivate: false });
       }
     });
   }
+  
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
 
-  //Small Screens
-  createDrawer() {
+   // Small Screens
+   createDrawer() {
     return (
       <div>
-        <AppBar >
+        <AppBar>
           <Toolbar>
             <Grid container direction="row" justify="space-between" alignItems="center">
               <Typography color="inherit" variant="headline">{<Link to="/">LOGO</Link>}</Typography>
-              <IconButton >
+              <IconButton>
                 <SearchIcon />
               </IconButton>
               <MenuIcon
                 className={this.props.classes.sideBarIcon}
-                onClick={() => { this.setState({ drawer: true }) }} />
+                onClick={() => { this.setState({ drawer: true }); }}
+              />
             </Grid>
           </Toolbar>
         </AppBar>
 
-        <SwipeableDrawer anchor="right"
+        <SwipeableDrawer
+          anchor="right"
           open={this.state.drawer}
-          onClose={() => { this.setState({ drawer: false }) }}
-          onOpen={() => { this.setState({ drawer: true }) }}>
+          onClose={() => { this.setState({ drawer: false }); }}
+          onOpen={() => { this.setState({ drawer: true }); }}
+        >
 
           <div
             tabIndex={0}
             role="button"
-            onClick={() => { this.setState({ drawer: false }) }}
-            onKeyDown={() => { this.setState({ drawer: false }) }}>
+            onClick={() => { this.setState({ drawer: false }); }}
+            onKeyDown={() => { this.setState({ drawer: false }); }}
+          >
 
             <List className={this.props.classes.list}>
               <ListItem key={1} button divider><Link to="/filter" style={{ textDecoration: 'none' }}> Detali paieška </Link></ListItem>
@@ -101,38 +103,39 @@ class Header extends Component {
         </SwipeableDrawer>
 
       </div>
-    );
-  }
-
-  //Larger Screens
-  destroyDrawer() {
-    const { classes } = this.props
-    const { value } = this.state
-    return (
-
-      <AppBar position="fixed" color="primary" >
-        <Tabs classes={{ indicator: classes.bigIndicator }} value={value} onChange={this.handleChange} >
-          <Typography variant="headline" style={{ flexGrow: 1 }} color="inherit" ><Link to="/">LOGO</Link></Typography>
-          <Tab label="Detali paieška" component={Link} to={"/filter"} />
-          <Tab label="Kalendorius" component={Link} to={"/calendar"} />
-          <Tab label="Blog'as" component={Link} to={"/blog"} />
-          <Tab label="Asmeninis profilis" component={Link} to={"/personal"} />
-          <Tab label="Duk" component={Link} to={"/duk"} />
-          <Tab label="Prisijungimas" component={Link} to={"/auth"} />
-        </Tabs>
-      </AppBar>
-
-    )
-  }
-
-  render() {
-    return (
-      <div>
-        {this.state.drawerActivate ? this.createDrawer() : this.destroyDrawer()}
-      </div>
-    );
-  }
+  );
 }
+
+// Larger Screens
+destroyDrawer() {
+  const { classes } = this.props;
+  const { value } = this.state;
+  return (
+
+    <AppBar position="fixed" color="primary">
+      <Tabs classes={{ indicator: classes.bigIndicator }} value={value} onChange={this.handleChange}>
+        <Typography variant="headline" style={{ flexGrow: 1 }} color="inherit"><Link to="/">LOGO</Link></Typography>
+        <Tab label="Detali paieška" component={Link} to="/filter" />
+        <Tab label="Kalendorius" component={Link} to="/calendar" />
+        <Tab label="Blog'as" component={Link} to="/blog" />
+        <Tab label="Asmeninis profilis" component={Link} to="/personal" />
+        <Tab label="Duk" component={Link} to="/duk" />
+        <Tab label="Prisijungimas" component={Link} to="/auth" />
+      </Tabs>
+    </AppBar>
+
+  );
+}
+
+render() {
+  const { drawerActivate } = this.state;
+  return (
+    <div>
+      {drawerActivate ? this.createDrawer() : this.destroyDrawer()}
+    </div>
+  );
+}
+  }
 
 Header.propTypes = {
   classes: PropTypes.object.isRequired

@@ -5,7 +5,7 @@ import Signup from './Signup';
 class AuthPage extends Component {
   state = { activeTab: 'login' }
 
-  handleClick = e => {
+  handleClick = (e) => {
     console.log(e);
     this.setState({ activeTab: e.target.getAttribute('data-tab') });
     document.querySelector('.tab-active').classList.remove('tab-active');
@@ -14,7 +14,14 @@ class AuthPage extends Component {
 
   render() {
     return (
-      <div style={{ position: "relative", width: "375px", height: "1wh", margin: "auto", marginTop: "64px" }} >
+      <div style={{
+        position: 'relative',
+        width: '375px',
+        height: '1wh',
+        margin: 'auto',
+        marginTop: '64px'
+      }}
+      >
         <div className="auth-tabs flex flex-center">
           <div className="auth-tab tab-active flex-1 flex flex-center" data-tab="login" onClick={this.handleClick}>
             LOG IN
@@ -23,10 +30,10 @@ class AuthPage extends Component {
             SIGN UP
           </div>
         </div>
-        {this.state.activeTab === "login" ? <Login active="true" /> : <Signup active="true" />}
+        {this.state.activeTab === 'login' ? <Login active="true" /> : <Signup active="true" />}
       </div>
     );
-  };
+  }
 }
 
 export default AuthPage;

@@ -17,10 +17,10 @@ class Course extends React.Component {
 
     render() {
         return (
-            <div className="course-container">
-                <CourseCard course={this.state.course} hideButtonMore />
-                <CourseInfo course={this.state.course} />
-            </div>
+          <div className="course-container">
+            <CourseCard course={this.state.course} hideButtonMore />
+            <CourseInfo course={this.state.course} />
+          </div>
         );
     }
 };

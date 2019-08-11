@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
 
-const ACourse = props => {
-    return (
-        <tr>          
-            <td>{props.data.name}</td>
-            <td></td>
-        </tr>
+const ACourse = props => 
+     (
+       <div>
+         <tr>          
+           <td>{props.data.name}</td>
+           <td />
+         </tr>
+       </div>
     );
-};
 
 export default ACourse;
