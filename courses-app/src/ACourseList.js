@@ -51,19 +51,24 @@ class ACourseList extends Component {
     }
 
     render() {
+        const { courses, addModal } = this.state;
         return (
           <div className="coursesList">
 
-            <Modal className="addModal" isOpen={this.state.addModal} onRequestClose={this.closeAddModal}>
+            <Modal className="addModal" isOpen={addModal} onRequestClose={this.closeAddModal}>
               <CourseAddComponent cancel={this.closeAddModal} add={this.handleOnAddItem} />
             </Modal>
 
             <p>Courses list:</p>
             <table>
               <tbody>
-                {this.state.courses.map((course, index) => {
-                            return <ACourse key={course.id} arrayId={index} data={course} />;
-                        })}
+                {courses.map((course, index) => (
+                  <ACourse 
+                    key={course.id} 
+                    arrayId={index} 
+                    data={course} 
+                  />
+                 ))}                       
               </tbody>
             </table>
             <br />

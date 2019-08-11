@@ -33,7 +33,7 @@ class CourseCard extends React.Component {
 
     renderCourseCardInfo = () => {
         if (this.props.hideButtonMore || this.state.arrowPressed) {
-            return <CourseCardInfoMini course={this.state.course} hideButtonMore={this.props.hideButtonMore} />
+            return <CourseCardInfoMini course={this.state.course} hideButtonMore={this.props.hideButtonMore} />;
         }
         return null;
     }
@@ -87,7 +87,10 @@ class CourseCard extends React.Component {
                   {this.renderRating(this.props.course.rating)} 
                   { /*  <span className="course-card-rating-total">{this.state.course.reviews.length}</span> */}
                 </div>
-                <h2 className="course-card-price">&euro; {this.props.course.price} </h2>
+                <h2 className="course-card-price">
+                  &euro; 
+                  {this.props.course.price} 
+                </h2>
               </div>
             </div>
             {this.renderArrowButton()}

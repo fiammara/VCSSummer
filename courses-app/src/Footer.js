@@ -21,30 +21,31 @@ const Footer = () => {
                >
                  {title}
                </Button>
+
              </NavLink>
            </Grid>
-);
+          );
             
-        return (
+      return (
 
-          <div className="footer">
+        <div className="footer">
 
-            <Grid container spacing={2}>
+          <Grid container spacing={2}>
 
-              {grids('/duk', 'duk')}
-              {grids('/blog', 'blogas')}
-              {grids('#', 'slapukų nustatymas')}
-              {grids('#', 'facebook')}
-              {grids('#', 'privatumo politika')}
-              {grids('#', 'susisiekti')}
-              {grids('#', 'įmonėms')}
+            {grids('/duk', 'duk')}
+            {grids('/blog', 'blogas')}
+            {grids('#', 'slapukų nustatymas')}
+            {grids('#', 'facebook')}
+            {grids('#', 'privatumo politika')}
+            {grids('#', 'susisiekti')}
+            {grids('#', 'įmonėms')}
 
-            </Grid>
+          </Grid>
             
-            <br />
-            <div className="authors"> &copy;Vasaros projektai. All rights reserved. </div>
+          <br />
+          <div className="authors"> &copy;Vasaros projektai. All rights reserved. </div>
 
-          </div>
+        </div>
         );
     }
 };

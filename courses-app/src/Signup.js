@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './App.css';
 
 class Signup extends Component {
-
   handleClick = (e) => {
     e.preventDefault();
   }
@@ -12,7 +11,7 @@ class Signup extends Component {
     return (
       <div className="flex wrap mar1 auth">
         <div>Prisiregistruokite ir pradėkite!</div>
-        <div className="flex input flex-center-Y marY1" style={{ backgroundColor: "#164675", color: "white" }}>
+        <div className="flex input flex-center-Y marY1" style={{ backgroundColor: '#164675', color: 'white' }}>
           <img
             src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-512.png"
             alt="Facebook"
@@ -41,10 +40,10 @@ class Signup extends Component {
           </div>
           <div className="flex input flex-center-Y marY1">
             <div className="flex-2 pd1">Paslaugos teikėjas</div>
-            <button className="flex-1 button-select">
+            <button type="button" className="flex-1 button-select">
               TAIP
             </button>
-            <button className="flex-1 button-select">
+            <button type="button" className="flex-1 button-select">
               NE
             </button>
           </div>
@@ -72,18 +71,19 @@ class Signup extends Component {
               name="Naujienlaiškiai"
               className=""
               value="true"
-            /> Taip, noriu gauti priminimus apie naujausius pasikeitimus
+            /> 
+            Taip, noriu gauti priminimus apie naujausius pasikeitimus
           </div>
-          <button onClick={this.handleClick} className="flex input flex-center marY1">Registruotis</button>
+          <button type="button" onClick={this.handleClick} className="flex input flex-center marY1">Registruotis</button>
         </form>
         <div className="agreement small-info marY1">Prisiregistruodamas patvirtinu, jog susipažinau ir sutinku su pateiktomis Terms of Use ir Privacy Policy</div>
         <div className="small-info marY1">
           Jau turite savo paskyra?
           <Link to="/auth"> Prisijunkite</Link>
         </div>
-      </div >
+      </div>
     );
   }
-};
+}
 
 export default Signup;

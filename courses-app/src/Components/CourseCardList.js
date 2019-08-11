@@ -65,7 +65,7 @@ class CourseCardList extends React.Component {
     }
 
     renderList = () => this.state.courses.map((course) => {
-        return <CourseCard course={course} id={course.id} key={course.id} onArrowClick={this.onArrowClick} />
+        return <CourseCard course={course} id={course.id} key={course.id} onArrowClick={this.onArrowClick} />;
     });
 
     render() {

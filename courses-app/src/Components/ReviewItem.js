@@ -24,7 +24,7 @@ class ReviewItem extends React.Component {
             </div>
           </div>
         );
-    };
+    }
 }
 
 export default ReviewItem; 

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class CourseCardInfoMini extends React.Component {
-
     renderMiniInfo = () => {
         return (
           <div className="course-info-mini">
@@ -43,7 +42,7 @@ class CourseCardInfoMini extends React.Component {
         }
         return (
           <Link to={`/courses/${this.props.course.id}`}>
-            <button>Daugiau</button>
+            <button type="button">Daugiau</button>
           </Link>
         );
     }

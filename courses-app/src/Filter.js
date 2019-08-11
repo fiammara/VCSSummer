@@ -364,16 +364,16 @@ export default function IntegrationReactSelect(props) {
           isMulti
         />
         <br />
-        <label>
+        <label htmlFor="checkbox">
           <input type="checkbox" value="value" />
           Švietimo ir mokslo institucijos patvirtintas sertifikatas
-          </label>
+        </label>
 
         <br />
-        <label>
+        <label htmlFor="checkbox">
           <input type="checkbox" value="value" />
           Populiarus kategorijoje
-          </label>
+        </label>
         <br />
         <br />
 

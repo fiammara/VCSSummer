@@ -52,6 +52,7 @@ class Blog extends Component {
     }
     
     render() {
+        const { blogData } = this.state;
         return (
           <div className="main">
             <div className="divas">
@@ -59,14 +60,14 @@ class Blog extends Component {
               <div className="textBlock">
                 <h3 className="intro1">pasirinkti pagal kategorijas</h3>
                 <input className="search1" type="text" name="fname" placeholder="Visos" />
-
-                {this.state.blogData.map((blogData, index) => {
-                            return <BlogPost key={blogData.id} arrayId={index} data={blogData} />;
-                        })}
+                
+                {blogData.map((post, index) => (
+                  <BlogPost key={post.id} arrayId={index} data={post} />))}
+                      
               </div>
             </div>
           </div>
-        );
+          );
     }
 }
 

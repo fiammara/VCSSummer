@@ -1,11 +1,12 @@
 import React from 'react';
 import './Main.css';
 import './Blog.css';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 const BlogPost = (props) => {
 
   return (
+    
     <div className="blogPost">
 
       <div className="blog1">
@@ -44,14 +45,17 @@ const BlogPost = (props) => {
     </div>
     );
      };
-BlogPost.propTypes = {
-    blogImg: PropTypes.string.isRequired,
-    blogTitleH: PropTypes.string.isRequired,
-    blogAuthorImg: PropTypes.string.isRequired,
-    blogAuthor: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    blogDate: PropTypes.string.isRequired,
-    blogTextwBtn: PropTypes.string.isRequired,
 
-};
+/* BlogPost.propTypes = {
+    
+  blogImg: PropTypes.string.isRequired,
+  blogTitleH: PropTypes.string.isRequired,
+  blogAuthorImg: PropTypes.string.isRequired,
+  blogAuthor: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  blogDate: PropTypes.string.isRequired,
+  blogTextwBtn: PropTypes.string.isRequired,
+    
+};*/
+
 export default BlogPost; 

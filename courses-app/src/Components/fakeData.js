@@ -24,7 +24,7 @@ class Course {
         })
         return Math.round((ratingSum / this.reviews.length));
     }
-};
+}
 
 class Certificate {
     constructor(title, about, link, logo) {
@@ -34,7 +34,7 @@ class Certificate {
         this.logo = logo;
         this.courses = [];
     }
-};
+}
 
 class Lector {
     constructor(firstName, lastName, photo, about, skills) {
@@ -46,10 +46,10 @@ class Lector {
         this.school = '';
         this.courses = [];
     }
-};
+}
 
 class School {
-    constructor(name, logo, addressStreet, addressCity, addressCountry = "Lietuva", email, phone, web, about) {
+    constructor(name, logo, addressStreet, addressCity, addressCountry = 'Lietuva', email, phone, web, about) {
         this.name = name;
         this.logo = logo;
         this.addressStreet = addressStreet;
@@ -59,7 +59,7 @@ class School {
         this.about = about;
         this.lectors = [];
     }
-};
+}
 
 class Review {
     constructor(id, rating, user, date, review) {
@@ -73,7 +73,7 @@ class Review {
 }
 
 const allCourses = [];
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i += 1) {
     allCourses.push(new Course(
         i,
         faker.commerce.productName(),
@@ -86,7 +86,7 @@ for (let i = 0; i < 10; i++) {
         faker.lorem.paragraph()
     ));
     const reviewCount = faker.random.number({ min: 2, max: 20 });
-    for (let j = 0; j < reviewCount; j++) {
+    for (let j = 0; j < reviewCount; j += 1) {
         const rating = faker.random.number({ min: 1, max: 5 });
         const user = faker.internet.userName();
         const date = faker.date.between('2019-01-01', '2019-07-06');
