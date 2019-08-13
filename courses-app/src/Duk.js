@@ -37,16 +37,20 @@ const Duk = () => {
           <Typography align="left"> Dažniausiai užduodami klausimai</Typography>
           <br />
 
-          {panel('Lorem ipsum dolor sit amet consetetur', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus exsit amet blandit leo lobortis eget.')}
+          {panel('Lorem ipsum dolor sit amet consetetur', 
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus exsit amet blandit leo lobortis eget.')}
 
           <br />
-          {panel('Lorem ipsum dolor sit amet consetetur', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus exsit amet blandit leo lobortis eget.')}
+          {panel('Lorem ipsum dolor sit amet consetetur', 
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus exsit amet blandit leo lobortis eget.')}
 
           <br />
-          {panel('Lorem ipsum dolor sit amet consetetur', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus exsit amet blandit leo lobortis eget.')}
+          {panel('Lorem ipsum dolor sit amet consetetur', 
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus exsit amet blandit leo lobortis eget.')}
 
           <br />
-          {panel('Lorem ipsum dolor sit amet consetetur', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus exsit amet blandit leo lobortis eget.')}
+          {panel('Lorem ipsum dolor sit amet consetetur', 
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus exsit amet blandit leo lobortis eget.')}
 
           <br />
           <Typography>

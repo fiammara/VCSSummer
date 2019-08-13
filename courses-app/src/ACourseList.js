@@ -60,17 +60,15 @@ class ACourseList extends Component {
             </Modal>
 
             <p>Courses list:</p>
-            <table>
-              <tbody>
-                {courses.map((course, index) => (
-                  <ACourse 
-                    key={course.id} 
-                    arrayId={index} 
-                    data={course} 
-                  />
-                 ))}                       
-              </tbody>
-            </table>
+            <div>            
+              {courses.map((course, index) => (
+                <ACourse 
+                  {...course}
+                  key={course.id} 
+                  arrayId={index}
+                />
+                 ))}                                  
+            </div>
             <br />
             <button type="button" onClick={this.openAddModal}>Add new course</button>
           </div>

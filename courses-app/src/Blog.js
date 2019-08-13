@@ -53,6 +53,7 @@ class Blog extends Component {
     
     render() {
         const { blogData } = this.state;
+       
         return (
           <div className="main">
             <div className="divas">
@@ -62,12 +63,17 @@ class Blog extends Component {
                 <input className="search1" type="text" name="fname" placeholder="Visos" />
                 
                 {blogData.map((post, index) => (
-                  <BlogPost key={post.id} arrayId={index} data={post} />))}
+                  <BlogPost 
+                    {...post}
+                    key={post.id} 
+                    arrayId={index}                     
+                  />
+             ))}
                       
               </div>
             </div>
           </div>
-          );
+        );
     }
 }
 
