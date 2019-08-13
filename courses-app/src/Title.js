@@ -1,15 +1,12 @@
 import React from 'react';
-import "./Main.css";
+import './Main.css';
 
-class Title extends React.Component {
+const Title = () => 
 
-    render() {
-
-        return (
-            <div className="title">
-                <h2 className="titleName">Lorem Ipsum</h2>
-            </div>
+     (
+       <div className="title">
+         <h2 className="titleName">Lorem Ipsum</h2>
+       </div>
         );
-    }
-}
+    
 export default Title;

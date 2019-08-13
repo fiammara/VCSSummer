@@ -42,6 +42,6 @@ const Main = () =>
          </Grid>
 
        </div>
-        );
+     );
     
 export default Main;

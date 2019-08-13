@@ -8,6 +8,6 @@ const SearchBar = () =>
          <input className="searchas2" type="text" name="search" />
          <h4 className="detaliP">detali paieska</h4>
        </div>
-        );
+      );
     
 export default SearchBar;

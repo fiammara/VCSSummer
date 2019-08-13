@@ -46,11 +46,11 @@ class Login extends Component {
               placeholder="Įveskite slaptažodį"
             />
           </div>
-          <button onClick={this.handleClick} className="flex input marY1 flex-center">Prisijungti</button>
+          <button type="submit" onClick={this.handleClick} className="flex input marY1 flex-center">Prisijungti</button>
         </form>
       </div>
     );
   }
-};
+}
 
 export default Login;
