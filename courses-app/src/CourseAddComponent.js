@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class CourseAddComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            courses: [
-                {
-                    name: ''
-                }
-            ]
+          name: ' ',
         };
     }
 
@@ -19,22 +16,24 @@ class CourseAddComponent extends Component {
     };
 
     addItem = (event) => {
+      const { name } = this.state;
         event.preventDefault();
-
+       
         const newItem = {
-            name: this.state.name
+            name,
         };
 
-        if (this.state.name !== undefined) {
+        if (name !== undefined) {
             axios
                 .post('http://localhost:8080/api/courses/addCourse', newItem)
-                .then(window.location.replace('/courses'));
+                .then(window.location.replace('/calendar'));
         } else {
             alert("new item can't be empty");
         }
     };
 
     render() {
+      const { onCancel } = this.props;
         return (
           <div>
             <p>Name your course</p>
@@ -53,7 +52,7 @@ class CourseAddComponent extends Component {
                 <div className="btn-group">
                   <button 
                     type="button"
-                    onClick={this.props.onCloseModal}
+                    onClick={onCancel}
                     className="inputButton"
                   >
                                 Cancel
@@ -73,5 +72,9 @@ class CourseAddComponent extends Component {
         );
     }
 }
+
+CourseAddComponent.propTypes = {    
+  onCancel: PropTypes.func.isRequired,
+};  
 
 export default CourseAddComponent;

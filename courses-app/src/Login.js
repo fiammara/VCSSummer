@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 class Login extends Component {
-
   handleClick = (e) => {
     e.preventDefault();
   }

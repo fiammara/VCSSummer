@@ -10,13 +10,7 @@ class ACourseList extends Component {
 
         this.state = {
             addModal: false,
-            courses: [{
-                id: '',
-                name: ''
-            }],
-            /*  newItem: {
-                  name: ''
-              }, */
+            courses: [],         
         };
     }
 
@@ -28,6 +22,14 @@ class ACourseList extends Component {
         axios.get('http://localhost:8080/api/courses').then((response) => {
             this.setState({ courses: response.data });
         });
+    }
+
+    addItem = () => {
+        const { name } = this.state;
+
+        axios.post('http://localhost:8080/api/courses', { name }).then(
+            this.getData()
+        );
     }
 
     openAddModal = () => {
@@ -42,21 +44,13 @@ class ACourseList extends Component {
         });
     }
 
-    addItem = () => {
-        const { name } = this.state.newItem;
-
-        axios.post('http://localhost:8080/api/courses', { name }).then(
-            this.getData()
-        );
-    }
-
     render() {
         const { courses, addModal } = this.state;
         return (
           <div className="coursesList">
 
             <Modal className="addModal" isOpen={addModal} onRequestClose={this.closeAddModal}>
-              <CourseAddComponent cancel={this.closeAddModal} add={this.handleOnAddItem} />
+              <CourseAddComponent onCancel={this.closeAddModal} add={this.handleOnAddItem} />
             </Modal>
 
             <p>Courses list:</p>

@@ -12,7 +12,6 @@ import Personal from './Personal';
 import Signup from './Signup';
 import CourseCalendar from './CourseCalendar';
 import CourseCardList from './Components/CourseCardList';
-import { allCourses } from './Components/fakeData';
 import './App.css';
 
 const App = () => 
@@ -23,9 +22,7 @@ const App = () =>
 
             <Switch>
               <Route exact path="/" component={Main} />
-              <Route exact path="/courses" render={() => {
-                        return <CourseCardList courses={allCourses} />;
-                    }} />
+              <Route exact path="/courses" component={CourseCardList} />                  
               <Route exact path="/courses/:id" component={Course} />
               <Route exact path="/filter" component={Filter} />
               <Route exact path="/duk" component={Duk} />
